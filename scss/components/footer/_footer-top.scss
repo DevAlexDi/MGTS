@@ -1,0 +1,170 @@
+@import "layout/var";
+
+.footer-top {
+  box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.08);
+  padding: 40px 0;
+
+  &__flex {
+    display: flex;
+  }
+
+  &__side {
+    width: 460px;
+    padding-left: 92px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      left: 0;
+      top: 0;
+      width: 64px;
+      height: 64px;
+    }
+
+    &--cam {
+      margin-right: 83px;
+
+      &:before {
+        background: url('../img/footer_icon1.svg');
+      }
+    }
+
+    &--mgts {
+      margin-right: 85px;
+
+      &:before {
+        background: url('../img/footer_icon2.svg');
+      }
+    }
+  }
+
+  &__name {
+    color: $black;
+    font-family: $roboto;
+    font-weight: $normal;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  &__text {
+    margin-top: 11px;
+    color: $grey-text;
+    font-family: $roboto;
+    font-weight: $normal;
+    font-size: 14px;
+    line-height: 20px;
+    height: 46px;
+  }
+
+  &__apps {
+    margin-top: 14px;
+    display: flex;
+  }
+
+  &__app {
+    display: block;
+    width: 150px;
+    margin-right: 20px;
+    background: white;
+    border: 1px solid rgba(108, 113, 124, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 18px;
+    font-family: $roboto;
+    font-weight: $normal;
+    color: $grey-text;
+    text-align: left;
+    position: relative;
+    outline: none;
+    transition: 0.3s;
+    padding: 8px;
+
+    &:hover {
+      background: rgba(116, 121, 131, 0.1);
+      border-color: rgba(108, 113, 124, 0.2);
+    }
+
+    &:active {
+      background: rgba(116, 121, 131, 0.15);
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 50%;
+    }
+
+    &--google {
+      padding-left: 44px;
+
+      &:before {
+        left: 14px;
+        width: 19px;
+        height: 20px;
+        transform: translateY(-50%);
+        background: url('../img/googleplay.svg');
+      }
+    }
+
+    &--apple {
+      padding-left: 47px;
+
+      &:before {
+        left: 13px;
+        width: 20px;
+        height: 25px;
+        transform: translateY(-13px);
+        background: url('../img/appstore.svg');
+      }
+    }
+  }
+
+  &__contacts {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: $roboto;
+    color: $grey-text;
+    font-weight: $normal;
+  }
+
+  &__phone {
+    display: block;
+    color: $black;
+    font-size: 20px;
+    line-height: 26px;
+    font-family: $roboto;
+    font-weight: $normal;
+    transition: 0.3s;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  &__callback {
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__ask {
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+  }
+
+  &__ask-text {
+    line-height: 16px;
+
+  }
+}

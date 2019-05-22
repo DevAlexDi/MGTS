@@ -1,0 +1,131 @@
+@import "layout/var";
+
+.popup-wrap {
+  z-index: 9001;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: left .15s ease-out,width .25s ease-out,height .25s ease-out;
+  perspective: 1000px;
+
+  &--noPointers {
+    pointer-events: none;
+  }
+}
+
+.popup {
+  position: relative;
+  margin-top: 16px;
+  width: 280px;
+  background: white;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.07), 0px 16px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 2px;
+  padding: 11px 0;
+  transition: all .25s ease-out .15s;
+  transform: rotateX(-25deg) scale(.98);
+  transform-origin: top center;
+  opacity: 0;
+
+  &--enterDone {
+    opacity: 1;
+    transform: rotateX(0deg) scale(1);
+  }
+
+  &--exitDone {
+    transform: rotateX(-25deg) scale(.98);
+    opacity: 0;
+  }
+
+  &__top {
+    position: absolute;
+    width: 22px;
+    height: 11px;
+    top: -11px;
+    left: 21px;
+    overflow: hidden;
+  }
+
+  &__triangle {
+    width: 15px;
+    height: 15px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.07);
+    transform-origin: center center;
+    transform: translate(-50%) rotate(45deg);
+    left: 50%;
+    position: absolute;
+    top: 4px;
+
+    &:before {
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #fff;
+      content: "";
+    }
+  }
+
+  &__mask {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 280px;
+    overflow: hidden;
+    transition: width .2s ease-out,height .2s ease-out;
+  }
+
+  &__menus {
+    position: relative;
+    display: block;
+    width: 9001px;
+    transition: left .2s ease-out;
+    z-index: 9001;
+  }
+
+  &__list {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 280px;
+    left: 0;
+
+    &--big {
+      width: 650px;
+      column-count: 2;
+      break-inside: avoid;
+
+      .popup__link {
+        width: 325px;
+      }
+    }
+
+    &--active {
+      opacity: 1;
+      transition: opacity .3s ease-out .1s;
+      z-index: 9003;
+    }
+
+    &--inactive {
+      opacity: 0;
+      transition: opacity .2s ease-out;
+      z-index: 9002;
+    }
+  }
+
+  &__link {
+    font-family: $roboto;
+    font-weight: $normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: $black;
+    display: block;
+    padding: 11px 21px 10px;
+    transition: 0.3s;
+
+    &:hover {
+      color: $blue;
+      background: $grey-bg;
+    }
+  }
+}

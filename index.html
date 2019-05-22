@@ -5,21 +5,749 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>МГТС</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="./favicon.ico">
-    <link rel="icon" type="image/png" href="./favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.ico" sizes="32x32">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web/dist/material-components-web.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.min.css"/>
   
 </head>
 <body>
-    
+
+    <!-- HEADER -->
+
+    <header>
+        <div class="header-top">
+            <div class="wrapper">
+                <div class="header-top__flex">
+                    <div class="header-top__logo"><img src="img/logo.svg" alt="" class="img-responsive"></div>
+                    <div class="header-top__left-links">
+                        <a href="#" class="header-top__link-open open_popup_menu" data-popup="#clients-popup">Частным клиентам</a>
+                        <a href="#" class="header-top__link-open header-top__link-open--location open_popup_menu" data-popup="#location-popup">Москва</a>
+                    </div>
+                    <div class="header-top__right">
+                        <a href="#" class="header-top__phone">
+                            <span class="header-top__phone-icon">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1 0H4.5C5.05 0 5.5 0.45 5.5 1C5.5 2.25 5.7 3.45 6.07 4.57C6.18 4.92 6.1 5.31 5.82 5.59L3.62 7.79C5.06 10.62 7.38 12.93 10.21 14.38L12.41 12.18C12.61 11.99 12.86 11.89 13.12 11.89C13.22 11.89 13.33 11.9 13.43 11.94C14.55 12.31 15.76 12.51 17 12.51C17.55 12.51 18 12.96 18 13.51V17C18 17.55 17.55 18 17 18C7.61 18 0 10.39 0 1C0 0.45 0.45 0 1 0ZM3.54 2C3.6 2.89 3.75 3.76 3.99 4.59L2.79 5.79C2.38 4.59 2.12 3.32 2.03 2H3.54ZM13.4 14.02C14.25 14.26 15.12 14.41 16 14.47V15.96C14.68 15.87 13.41 15.61 12.2 15.21L13.4 14.02Z" fill="#747983"/>
+                                </svg>
+                            </span>
+                            <span class="header-top__phone-text">8 495 636-06-36</span>
+                        </a>
+                        <a href="#" class="header-top__link">
+                            <span class="header-top__link-icon">
+                                <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2 0H20C21.1 0 22 0.9 22 2V16C22 17.1 21.1 18 20 18H13V16H20V2H2V5H0V2C0 0.9 0.9 0 2 0ZM0 18V15C1.66 15 3 16.34 3 18H0ZM0 11V13C2.76 13 5 15.24 5 18H7C7 14.13 3.87 11 0 11ZM0 9V7C6.07 7 11 11.92 11 18H9C9 13.03 4.97 9 0 9Z" class="header-top__svg"/>
+                                </svg>
+                            </span>
+                            <span class="header-top__link-text">Электронный счёт</span>
+                        </a>
+                        <a href="#" class="header-top__link">
+                            <span class="header-top__link-icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM5.07 16.28C5.5 15.38 8.12 14.5 10 14.5C11.88 14.5 14.51 15.38 14.93 16.28C13.57 17.36 11.86 18 10 18C8.14 18 6.43 17.36 5.07 16.28ZM10 12.5C11.46 12.5 14.93 13.09 16.36 14.83C17.38 13.49 18 11.82 18 10C18 5.59 14.41 2 10 2C5.59 2 2 5.59 2 10C2 11.82 2.62 13.49 3.64 14.83C5.07 13.09 8.54 12.5 10 12.5ZM10 4C8.06 4 6.5 5.56 6.5 7.5C6.5 9.44 8.06 11 10 11C11.94 11 13.5 9.44 13.5 7.5C13.5 5.56 11.94 4 10 4ZM8.5 7.5C8.5 8.33 9.17 9 10 9C10.83 9 11.5 8.33 11.5 7.5C11.5 6.67 10.83 6 10 6C9.17 6 8.5 6.67 8.5 7.5Z" class="header-top__svg"/>
+                                </svg>
+                            </span>
+                            <span class="header-top__link-text">Личный кабинет</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="wrapper">
+                <div class="header-bottom__flex">
+                    <nav class="header-bottom__menu">
+                        <a href="#" class="header-bottom__link">Пакеты услуг</a>
+                        <a href="#" class="header-bottom__link open_popup_menu" data-popup="#internet-popup">Интернет</a>
+                        <a href="#" class="header-bottom__link open_popup_menu" data-popup="#tv-popup">Телевидение</a>
+                        <a href="#" class="header-bottom__link open_popup_menu" data-popup="#mobile-popup">Мобильная связь</a>
+                        <a href="#" class="header-bottom__link open_popup_menu" data-popup="#home-popup">Домашний телефон</a>
+                        <a href="#" class="header-bottom__link header-bottom__link--more">Ещё</a>
+                    </nav>
+                    <button class="blue-button">Подключить услуги</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HEAD SLIDER -->
+
+    <section class="head-slider">
+        <div class="head-slider__item">
+            <div class="head-slider__image" style="background-image: url(img/slider.jpg)"></div>
+        </div>
+        <div class="head-slider__item">
+            <div class="head-slider__image" style="background-image: url(img/slider.jpg)"></div>
+        </div>
+        <div class="head-slider__item">
+            <div class="head-slider__image" style="background-image: url(img/slider.jpg)"></div>
+        </div>
+        <div class="head-slider__item">
+            <div class="head-slider__image" style="background-image: url(img/slider.jpg)"></div>
+        </div>
+        <div class="head-slider__item">
+            <div class="head-slider__image" style="background-image: url(img/slider.jpg)"></div>
+        </div>
+    </section>
+
+    <!-- CONNECTION -->
+
+    <!-- Add class "connection--can" or "connection--denied" -->
+    <section class="connection">
+        <div class="wrapper">
+            <div class="connection__flex">
+                <div class="connection__home"><img src="img/home.svg" alt="" class="img-responsive"></div>
+                <div class="connection__block">
+                    <p class="connection__title">Проверьте возможность подключения<br>по вашему адресу <span class="connection__city">в Москве</span></p>
+                    <!--<p class="connection__title connection__title--can">Вы можете подключить интернет!</p>-->
+                    <!--<p class="connection__title connection__title--denied"><span class="connection__icon"></span> К сожалению, по указанному адресу нет возможности<br>подключить интернет. <span class="connection__city">Узнать, когда будет.</span></p>-->
+                    <form class="connection__form">
+                        <div class="connection__field connection__field--big">
+                            <div class="mdc-text-field mdc-text-field--outlined connection__text-field">
+                                <input type="text" id="street" class="mdc-text-field__input">
+                                <div class="mdc-notched-outline">
+                                    <div class="mdc-notched-outline__leading"></div>
+                                    <div class="mdc-notched-outline__notch">
+                                        <label for="street" class="mdc-floating-label">Улица</label>
+                                    </div>
+                                    <div class="mdc-notched-outline__trailing"></div>
+                                </div>
+                            </div>
+                            <div class="mdc-text-field-helper-line">
+                                <div class="mdc-text-field-helper-text connection__helper-text">Вспомогательный текст, если нужен</div>
+                            </div>
+                        </div>
+                        <div class="connection__field connection__field--small">
+                            <div class="mdc-text-field mdc-text-field--outlined connection__text-field">
+                                <input type="text" id="house" class="mdc-text-field__input">
+                                <div class="mdc-notched-outline">
+                                    <div class="mdc-notched-outline__leading"></div>
+                                    <div class="mdc-notched-outline__notch">
+                                        <label for="house" class="mdc-floating-label">Дом</label>
+                                    </div>
+                                    <div class="mdc-notched-outline__trailing"></div>
+                                </div>
+                            </div>
+                            <div class="mdc-text-field-helper-line">
+                                <div class="mdc-text-field-helper-text connection__helper-text">Вспомогательный текст, если нужен</div>
+                            </div>
+                        </div>
+                        <div class="connection__field connection__field--small">
+                            <div class="mdc-text-field mdc-text-field--outlined connection__text-field">
+                                <input type="text" id="apartments" class="mdc-text-field__input">
+                                <div class="mdc-notched-outline">
+                                    <div class="mdc-notched-outline__leading"></div>
+                                    <div class="mdc-notched-outline__notch">
+                                        <label for="apartments" class="mdc-floating-label">Квартира</label>
+                                    </div>
+                                    <div class="mdc-notched-outline__trailing"></div>
+                                </div>
+                            </div>
+                            <div class="mdc-text-field-helper-line">
+                                <div class="mdc-text-field-helper-text connection__helper-text">Вспомогательный текст, если нужен</div>
+                            </div>
+                        </div>
+                        <button class="connection__button grey-button">Проверить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PACKAGES -->
+
+    <section class="packages">
+        <div class="wrapper">
+            <div class="packages__head">
+                <h3 class="title packages__side">Что подключаем?</h3>
+                <div class="packages__switch packages__side">
+                    <span class="packages__switch-text">Пакеты услуг</span>
+                    <div class="pack-checkbox">
+                        <input type="checkbox" class="pack-checkbox__checkbox" name="" id="packages-checkbox">
+                        <label for="packages-checkbox"></label>
+                    </div>
+                    <span class="packages__switch-text">Только интернет</span>
+                </div>
+            </div>
+
+            <!-- SERVICE PACKAGES -->
+
+            <div class="packages__block" id="service_packs">
+                <div class="packages__flex">
+                <div class="pack-item">
+                    <div class="pack-item__head">
+                        <img src="img/pack1.svg" alt="" class="img-responsive">
+                        <span class="pack-item__title">Домашний Интернет<br>+ Мобильная связь</span>
+                    </div>
+                    <div class="pack-item__flex">
+                        <div class="pack-item__side">
+                            <p class="pack-item__name">Домашний интернет</p>
+                            <p class="pack-item__option">
+                                <span class="pack-item__num">200</span> Мбит/с
+                            </p>
+                            <p class="pack-item__option">Бесплатный<br>Wi-Fi роутер</p>
+                        </div>
+                        <div class="pack-item__side">
+                            <p class="pack-item__name">Smart Mini</p>
+                            <p class="pack-item__option">
+                                <span class="pack-item__num">2</span> Гбайта
+                            </p>
+                            <p class="pack-item__option">
+                                <span class="pack-item__num">300</span> Мин<br>на все сети
+                            </p>
+                        </div>
+                        <div class="pack-item__side"></div>
+                    </div>
+                    <div class="pack-item__bottom">
+                        <a href="#" class="blue-button">Подключить</a>
+                        <div class="pack-item__price">
+                            <span class="pack-item__count">649</span> ₽/мес.
+                        </div>
+                        <div class="pack-item__sale">Выгода 28%</div>
+                    </div>
+                </div>
+                <div class="pack-item">
+                    <div class="pack-item__head">
+                        <img src="img/pack2.svg" alt="" class="img-responsive">
+                        <span class="pack-item__title">Домашний Интернет<br>+ ТВ</span>
+                    </div>
+                    <div class="pack-item__flex">
+                        <div class="pack-item__side">
+                            <p class="pack-item__name">Домашний интернет</p>
+                            <p class="pack-item__option">
+                                <span class="pack-item__num">200</span> Мбит/с
+                            </p>
+                            <p class="pack-item__option">Бесплатный<br>Wi-Fi роутер</p>
+                        </div>
+                        <div class="pack-item__side">
+                            <p class="pack-item__name">ТВ-пакет Базовый</p>
+                            <p class="pack-item__option">
+                                <span class="pack-item__num">160</span> каналов
+                            </p>
+                            <p class="pack-item__option">
+                                <span class="pack-item__num">14</span> HD<br>каналов
+                            </p>
+                        </div>
+                        <div class="pack-item__side"></div>
+                    </div>
+                    <div class="pack-item__bottom">
+                        <a href="#" class="blue-button">Подключить</a>
+                        <div class="pack-item__price">
+                            <span class="pack-item__count">649</span> ₽/мес.
+                        </div>
+                        <div class="pack-item__sale">Выгода 14%</div>
+                    </div>
+                </div>
+                <div class="pack-item">
+                    <div class="pack-item__head">
+                        <img src="img/pack3.svg" alt="" class="img-responsive">
+                        <span class="pack-item__title">Домашний Интернет<br>+ Мобильная связь</span>
+                    </div>
+                    <div class="pack-item__flex">
+                        <div class="pack-item__side">
+                            <p class="pack-item__name">Домашний интернет</p>
+                            <p class="pack-item__option">
+                                <span class="pack-item__num">200</span> Мбит/с
+                            </p>
+                            <p class="pack-item__option">Бесплатный<br>Wi-Fi роутер</p>
+                        </div>
+                        <div class="pack-item__side">
+                            <p class="pack-item__name">Smart Non Stop безлим</p>
+                            <p class="pack-item__option">
+                                <span class="pack-item__num">∞</span> Гбайт
+                            </p>
+                            <p class="pack-item__option">
+                                <span class="pack-item__num">500</span> Мин<br>на все сети
+                            </p>
+                        </div>
+                        <div class="pack-item__side"></div>
+                    </div>
+                    <div class="pack-item__bottom">
+                        <a href="#" class="blue-button">Подключить</a>
+                        <div class="pack-item__price">
+                            <span class="pack-item__count">999</span> ₽/мес.
+                        </div>
+                        <div class="pack-item__sale">Выгода 13%</div>
+                    </div>
+                </div>
+                <div class="pack-item">
+                    <div class="pack-item__head">
+                        <img src="img/pack4.svg" alt="" class="img-responsive">
+                        <span class="pack-item__title">Домашний Интернет<br>+ Мобильная связь + ТВ</span>
+                    </div>
+                    <div class="pack-item__flex">
+                        <div class="pack-item__side">
+                            <p class="pack-item__name">Домашний интернет</p>
+                            <p class="pack-item__option">
+                                <span class="pack-item__num">200</span> Мбит/с
+                            </p>
+                            <p class="pack-item__option">Бесплатный<br>Wi-Fi роутер</p>
+                        </div>
+                        <div class="pack-item__side">
+                            <p class="pack-item__name">Smart Mini</p>
+                            <p class="pack-item__option">
+                                <span class="pack-item__num">2</span> Гбайта
+                            </p>
+                            <p class="pack-item__option">
+                                <span class="pack-item__num">300</span> Мин<br>на все сети
+                            </p>
+                        </div>
+                        <div class="pack-item__side">
+                            <p class="pack-item__name">ТВ-пакет Базовый</p>
+                            <p class="pack-item__option">
+                                <span class="pack-item__num">160</span> каналов
+                            </p>
+                            <p class="pack-item__option">
+                                <span class="pack-item__num">14</span> HD<br>каналов
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pack-item__bottom">
+                        <a href="#" class="blue-button">Подключить</a>
+                        <div class="pack-item__price">
+                            <span class="pack-item__count">849</span> ₽/мес.
+                        </div>
+                        <div class="pack-item__sale">Выгода 27%</div>
+                    </div>
+                </div>
+                <div class="pack-item">
+                    <div class="pack-item__head">
+                        <img src="img/pack5.svg" alt="" class="img-responsive">
+                        <span class="pack-item__title">Домашний Интернет<br>+ Мобильная связь + ТВ</span>
+                    </div>
+                    <div class="pack-item__flex">
+                        <div class="pack-item__side">
+                            <p class="pack-item__name">Домашний интернет</p>
+                            <p class="pack-item__option">
+                                <span class="pack-item__num">200</span> Мбит/с
+                            </p>
+                            <p class="pack-item__option">Бесплатный<br>Wi-Fi роутер</p>
+                        </div>
+                        <div class="pack-item__side">
+                            <p class="pack-item__name">Smart Non Stop безлим</p>
+                            <p class="pack-item__option">
+                                <span class="pack-item__num">∞</span> Гбайт
+                            </p>
+                            <p class="pack-item__option">
+                                <span class="pack-item__num">500</span> Мин<br>на все сети
+                            </p>
+                        </div>
+                        <div class="pack-item__side">
+                            <p class="pack-item__name">ТВ-пакет Базовый</p>
+                            <p class="pack-item__option">
+                                <span class="pack-item__num">160</span> каналов
+                            </p>
+                            <p class="pack-item__option">
+                                <span class="pack-item__num">14</span> HD<br>каналов
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pack-item__bottom">
+                        <a href="#" class="blue-button">Подключить</a>
+                        <div class="pack-item__price">
+                            <span class="pack-item__count">1 099</span> ₽/мес.
+                        </div>
+                        <div class="pack-item__sale">Выгода 22%</div>
+                    </div>
+                </div>
+                <div class="pack-item pack-item--custom">
+                    <div class="pack-item__custom-title">
+                        Не нашли подходящий пакет?
+                    </div>
+                    <p class="pack-item__custom-text">Соберите свой в нашем конструкторе</p>
+                    <button class="blue-button pack-item__custom-but">Собрать свой пакет</button>
+                </div>
+            </div>
+            </div>
+
+            <!-- ONLY INTERNET -->
+
+            <div class="packages__block" id="internet_packs" style="display: none;">
+                <div class="packages__flex">
+                    <div class="pack-item pack-item--internet">
+                        <div class="pack-item__head pack-item__head--internet">
+                            <img src="img/pack_int1.svg" alt="" class="img-responsive">
+                            <p class="pack-item__title pack-item__title--internet">
+                                <span class="pack-item__num--internet">200</span> Мбит/с
+                            </p>
+                        </div>
+                        <p class="pack-item__text">Бесплатный Wi-Fi роутер</p>
+                        <p class="pack-item__text">Постоплата в Едином счёте</p>
+                        <div class="pack-item__bottom pack-item__bottom--internet">
+                            <a href="#" class="blue-button">Подключить</a>
+                            <div class="pack-item__price">
+                                <span class="pack-item__count">499</span> ₽/мес.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pack-item pack-item--internet">
+                        <div class="pack-item__head pack-item__head--internet">
+                            <img src="img/pack_int2.svg" alt="" class="img-responsive">
+                            <p class="pack-item__title pack-item__title--internet">
+                                <span class="pack-item__num--internet">350</span> Мбит/с
+                            </p>
+                        </div>
+                        <p class="pack-item__text">Бесплатный Wi-Fi роутер</p>
+                        <p class="pack-item__text">Постоплата в Едином счёте</p>
+                        <div class="pack-item__bottom pack-item__bottom--internet">
+                            <a href="#" class="blue-button">Подключить</a>
+                            <div class="pack-item__price">
+                                <span class="pack-item__count">699</span> ₽/мес.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pack-item pack-item--internet">
+                        <div class="pack-item__head pack-item__head--internet">
+                            <img src="img/pack_int3.svg" alt="" class="img-responsive">
+                            <p class="pack-item__title pack-item__title--internet">
+                                <span class="pack-item__num--internet">500</span> Мбит/с
+                            </p>
+                        </div>
+                        <p class="pack-item__text">Бесплатный Wi-Fi роутер</p>
+                        <p class="pack-item__text">Постоплата в Едином счёте</p>
+                        <div class="pack-item__bottom pack-item__bottom--internet">
+                            <a href="#" class="blue-button">Подключить</a>
+                            <div class="pack-item__price">
+                                <span class="pack-item__count">999</span> ₽/мес.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pack-item pack-item--internet">
+                        <div class="pack-item__head pack-item__head--internet">
+                            <img src="img/pack_int4.svg" alt="" class="img-responsive">
+                            <p class="pack-item__title pack-item__title--internet">
+                                <span class="pack-item__num--internet">1 000</span> Мбит/с
+                            </p>
+                        </div>
+                        <p class="pack-item__text">Бесплатный Wi-Fi роутер</p>
+                        <p class="pack-item__text">Постоплата в Едином счёте</p>
+                        <div class="pack-item__bottom pack-item__bottom--internet">
+                            <a href="#" class="blue-button">Подключить</a>
+                            <div class="pack-item__price">
+                                <span class="pack-item__count">1 499</span> ₽/мес.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ADVANTAGES -->
+
+    <section class="advantages">
+        <div class="wrapper">
+            <h3 class="title title--center">Делаем жизнь удобней</h3>
+            <div class="advantages__flex">
+                <div class="advantages__item">
+                    <div class="advantages__image"><img src="img/adv1.svg" alt="" class="img-responsive"></div>
+                    <p class="advantages__name">Общайтесь больше</p>
+                    <p class="advantages__text">Звоните бесплатно на МТС, городские номера и внутри сети МГТС</p>
+                </div>
+                <div class="advantages__item">
+                    <div class="advantages__image"><img src="img/adv2.svg" alt="" class="img-responsive"></div>
+                    <p class="advantages__name">Не надо менять номер</p>
+                    <p class="advantages__text">Сохраните номер телефона при переходе от другого оператора</p>
+                </div>
+                <div class="advantages__item">
+                    <div class="advantages__image"><img src="img/adv3.svg" alt="" class="img-responsive"></div>
+                    <p class="advantages__name">Управляйте ТВ-эфиром</p>
+                    <p class="advantages__text">Ставьте на паузу, перематывайте и записывайте любимые шоу</p>
+                </div>
+                <div class="advantages__item">
+                    <div class="advantages__image"><img src="img/adv4.svg" alt="" class="img-responsive"></div>
+                    <p class="advantages__name">Будьте на связи</p>
+                    <p class="advantages__text advantages__text--small">Пользуйтесь всеми услугами и платите за них по факту в конце месяца</p>
+                </div>
+            </div>
+            <div class="advantages__callback-wrap">
+                <p class="advantages__callback">
+                    Есть вопросы по предложениям? <a href="#" class="advantages__link">Закажите обратный звонок</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- INSTALLATION -->
+
+    <section class="installation">
+        <div class="installation__image"></div>
+        <div class="installation__content">
+            <div class="wrapper">
+                <div class="installation__flex">
+                    <div class="installation__left">
+                        <p class="installation__name">Умный дом</p>
+                        <a href="#" class="installation__link">Камера LTV</a><br>
+                        <a href="#" class="installation__link">CNQ-310 C1</a>
+                        <p class="installation__price installation__price--margin">8 425 <span class="installation__rub">₽</span></p>
+                        <p class="installation__name installation__name--white">аренда</p>
+                        <p class="installation__price">500 <span class="installation__rub">₽/мес.</span></p>
+                    </div>
+                    <div class="installation__middle">
+                        <p class="installation__title">Как подключиться?</p>
+                        <ol class="installation__list">
+                            <li class="installation__item">Оставьте заявку</li>
+                            <li class="installation__item">Наш оператор позвонит вам, уточнит детали и предложит удобное время выезда специалиста</li>
+                            <li class="installation__item">Cпециалист приедет, бережно подключит и настроит оборудование</li>
+                        </ol>
+                        <button class="blue-button">оставить заявку</button>
+                    </div>
+                    <div class="installation__right">
+                        <p class="installation__name">Интернет</p>
+                        <a href="#" class="installation__link">Роутер ONT ZTE ZXHN 670</a>
+                        <p class="installation__name installation__name--big installation__name--white">бесплатно</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+
+    <section class="services">
+        <div class="wrapper">
+            <div class="services__flex">
+                <div class="services__item services__item--left">
+                    <div class="services__title services__title--left">Электронный счёт</div>
+                    <p class="services__text services__text--left">Подключите и платите за все услуги МГТС в один клик, не выходя из дома.</p>
+                    <div class="services__flex">
+                        <p class="services__text services__text--left_half">Контролируйте ваш счёт, где бы вы не находились</p>
+                        <p class="services__text services__text--left_half">Переход на электронный счёт займёт меньше минуты</p>
+                    </div>
+                    <a href="#" class="services__link services__link--white">Подключить электронный счёт</a>
+                </div>
+                <div class="services__right">
+                    <div class="services__flex services__flex--wrap">
+                        <div class="services__item services__item--2">
+                            <div class="services__title">Интернет</div>
+                            <p class="services__text services__text--margin2">Домашний интернет по технологии GPON. Скорость до 1 Гб/с</p>
+                            <button class="blue-button">Подключить</button>
+                        </div>
+                        <div class="services__item services__item--3 services__item--no_margin_right">
+                            <div class="services__title">Датчик<br>протечки воды</div>
+                            <p class="services__text services__text--margin3">Оповестит о протечке воды и вы сможете вовремя её перекрыть.</p>
+                            <a href="#" class="services__link">Всё оборудование<br>для умного дома</a>
+                        </div>
+                        <div class="services__item services__item--4">
+                            <div class="services__title">Безопасность вашего дома</div>
+                            <p class="services__text services__text--margin4">МГТС предлагает услуги по установке персональной охранной сигнализации</p>
+                            <a href="#" class="services__link">Смотреть оборудование</a>
+                        </div>
+                        <div class="services__item services__item--5 services__item--no_margin_right">
+                            <div class="services__title">Мобильная связь для всей семьи</div>
+                            <p class="services__text services__text--margin5">Безлимитное общение, один счёт.</p>
+                            <button class="blue-button">Подключить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWS -->
+
+    <section class="news">
+        <div class="wrapper">
+            <h3 class="title title--center">Новости МГТС</h3>
+            <div class="news__flex news-slider">
+                <div class="news__item">
+                    <span class="news__date">18 февраля</span>
+                    <a href="#" class="news__text">ПАО МГТС вводит новые тарифы на услуги местной телефонной связи с 1 марта 2019 года</a>
+                </div>
+                <div class="news__item">
+                    <span class="news__date">18 февраля</span>
+                    <a href="#" class="news__text">МГТС меняет условия предоставления услуг на ряде тарифных планов</a>
+                </div>
+                <div class="news__item">
+                    <span class="news__date">18 февраля</span>
+                    <a href="#" class="news__text">Вниманию подписчиков ТВ-пакета «Оптимальный»</a>
+                </div>
+                <div class="news__item">
+                    <span class="news__date">18 февраля</span>
+                    <a href="#" class="news__text">МГТС увеличит скорость<br>на тарифных планах услуги Интернет</a>
+                </div>
+                <div class="news__item">
+                    <span class="news__date">18 февраля</span>
+                    <a href="#" class="news__text">ПАО МГТС вводит новые тарифы на услуги местной телефонной связи с 1 марта 2019 года</a>
+                </div>
+                <div class="news__item">
+                    <span class="news__date">18 февраля</span>
+                    <a href="#" class="news__text">МГТС меняет условия предоставления услуг на ряде тарифных планов</a>
+                </div>
+                <div class="news__item">
+                    <span class="news__date">18 февраля</span>
+                    <a href="#" class="news__text">Вниманию подписчиков ТВ-пакета «Оптимальный»</a>
+                </div>
+                <div class="news__item">
+                    <span class="news__date">18 февраля</span>
+                    <a href="#" class="news__text">МГТС увеличит скорость на тарифных планах услуги Интернет</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div class="footer-top">
+            <div class="wrapper">
+                <div class="footer-top__flex">
+                    <div class="footer-top__side footer-top__side--cam">
+                        <p class="footer-top__name">MGTS.MyCam</p>
+                        <p class="footer-top__text">Видеонаблюдение — это услуга от МГТС, с которой Вы всегда сможете незримо «присутствовать» дома.</p>
+                        <div class="footer-top__apps">
+                            <a href="#" class="footer-top__app footer-top__app--google">Google Play</a>
+                            <a href="#" class="footer-top__app footer-top__app--apple">App Store</a>
+                        </div>
+                    </div>
+                    <div class="footer-top__side footer-top__side--mgts">
+                        <p class="footer-top__name">МГТС</p>
+                        <p class="footer-top__text">МГТС Личный кабинет — все услуги<br> на ладони.</p>
+                        <div class="footer-top__apps">
+                            <button href="#" class="footer-top__app footer-top__app--google">Google Play</button>
+                            <a href="#" class="footer-top__app footer-top__app--apple">App Store</a>
+                        </div>
+                    </div>
+                    <div class="footer-top__contacts">
+                        <p class="footer-top__call-us">Позвоните нам</p>
+                        <a href="tel:" class="footer-top__phone">8 495 636-06-36</a>
+                        <a href="#" class="footer-top__callback">Обратный звонок</a>
+                        <div class="footer-top__ask">
+                            <span class="footer-top__ask-text">Задайте<br>вопрос</span>
+                            <a href="#" class="footer-bottom__soc"><img src="img/ask.svg" class="footer-bottom__soc-icon"></a>
+                            <a href="#" class="footer-bottom__soc"><img src="img/vk.svg" class="footer-bottom__soc-icon"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="wrapper">
+                <div class="footer-bottom__flex">
+                    <div class="footer-bottom__menu">
+                        <a href="#" class="footer-bottom__link">Способы оплаты</a>
+                        <a href="#" class="footer-bottom__link">Поддержка</a>
+                        <a href="#" class="footer-bottom__link">Центры продаж</a>
+                        <a href="#" class="footer-bottom__link">О компании</a>
+                        <a href="#" class="footer-bottom__link">Для партнеров</a>
+                        <a href="#" class="footer-bottom__link">Новости</a>
+                        <a href="#" class="footer-bottom__link">Раскрытие информации</a>
+                    </div>
+                    <div class="footer-bottom__socials">
+                        <a href="#" class="footer-bottom__soc"><img src="img/vk.svg" class="footer-bottom__soc-icon"></a>
+                        <a href="#" class="footer-bottom__soc"><img src="img/fb.svg" class="footer-bottom__soc-icon"></a>
+                        <a href="#" class="footer-bottom__soc"><img src="img/insta.svg" class="footer-bottom__soc-icon"></a>
+                        <a href="#" class="footer-bottom__soc"><img src="img/twi.svg" class="footer-bottom__soc-icon"></a>
+                        <a href="#" class="footer-bottom__soc"><img src="img/ok.svg" class="footer-bottom__soc-icon"></a>
+                    </div>
+                </div>
+                <div class="footer-bottom__flex footer-bottom__flex--margin">
+                    <p class="footer-bottom__copyright">© 2019, официальный сайт ПАО МГТС</p>
+                    <p class="footer-bottom__age">18+</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- POPUP MENUS -->
+
+    <div class="popup-wrap popup-wrap--noPointers">
+        <div class="popup">
+            <div class="popup__top">
+                <div class="popup__triangle"></div>
+            </div>
+
+            <div class="popup__mask">
+                <div class="popup__menus">
+                    <div class="popup__list popup__list--inactive" id="clients-popup">
+                        <a href="#" class="popup__link">Частным клиентам</a>
+                        <a href="#" class="popup__link">Бизнесу</a>
+                        <a href="#" class="popup__link">Операторам связи</a>
+                        <a href="#" class="popup__link">Гос. организациям</a>
+                    </div>
+
+                    <div class="popup__list popup__list--big popup__list--inactive" id="location-popup">
+                        <a href="#" class="popup__link">Балашиха</a>
+                        <a href="#" class="popup__link">Бронницы</a>
+                        <a href="#" class="popup__link">Голицыно</a>
+                        <a href="#" class="popup__link">Долгопрудный</a>
+                        <a href="#" class="popup__link">Красноармейск</a>
+                        <a href="#" class="popup__link">Красногорский р-н (Красногорск)</a>
+                        <a href="#" class="popup__link">Ленинский р-н (Видное)</a>
+                        <a href="#" class="popup__link">Лобня</a>
+                        <a href="#" class="popup__link">Москва</a>
+                        <a href="#" class="popup__link">Мытищинский р-н (Мытищи)</a>
+                        <a href="#" class="popup__link">Наро-Фоминский р-н (Новоглаголево)</a>
+                        <a href="#" class="popup__link">Новая Москва</a>
+                        <a href="#" class="popup__link">Одинцовский р-н</a>
+                        <a href="#" class="popup__link">Пушкинский р-н</a>
+                        <a href="#" class="popup__link">Раменский р-н (Раменское)</a>
+                        <a href="#" class="popup__link">Реутов</a>
+                        <a href="#" class="popup__link">Сергиев Посад</a>
+                        <a href="#" class="popup__link">Солнечногорский р-н (Андреевка)</a>
+                        <a href="#" class="popup__link">Химки</a>
+                        <a href="#" class="popup__link">Чехов</a>
+                    </div>
+
+                    <div class="popup__list popup__list--inactive" id="internet-popup">
+                        <a href="#" class="popup__link">Акции</a>
+                        <a href="#" class="popup__link">Тарифы</a>
+                        <a href="#" class="popup__link">Пакет услуг</a>
+                        <a href="#" class="popup__link">Дополнительные услуги</a>
+                        <a href="#" class="popup__link">Бонусы</a>
+                        <a href="#" class="popup__link">Технология GPON</a>
+                        <a href="#" class="popup__link">VIP-обслуживание</a>
+                        <a href="#" class="popup__link">Компьютерная помощь</a>
+                        <a href="#" class="popup__link">Оборудование</a>
+                    </div>
+
+                    <div class="popup__list popup__list--inactive" id="tv-popup">
+                        <a href="#" class="popup__link">Акции</a>
+                        <a href="#" class="popup__link">Тарифы</a>
+                        <a href="#" class="popup__link">Пакет услуг</a>
+                        <a href="#" class="popup__link">Персональное ТВ</a>
+                        <a href="#" class="popup__link">Видео по запросу</a>
+                        <a href="#" class="popup__link">Дополнительные услуги</a>
+                        <a href="#" class="popup__link">ТВ-программа</a>
+                        <a href="#" class="popup__link">Оборудование</a>
+                        <a href="#" class="popup__link">ТВ-каналы</a>
+                    </div>
+
+                    <div class="popup__list popup__list--inactive" id="mobile-popup">
+                        <a href="#" class="popup__link">Акции</a>
+                        <a href="#" class="popup__link">Тарифы</a>
+                        <a href="#" class="popup__link">Пакет услуг</a>
+                        <a href="#" class="popup__link">В МГТС со своим номером</a>
+                        <a href="#" class="popup__link">Услуги</a>
+                        <a href="#" class="popup__link">Роуминг и межгород</a>
+                        <a href="#" class="popup__link">Полезные команды</a>
+                    </div>
+
+                    <div class="popup__list popup__list--inactive" id="home-popup">
+                        <a href="#" class="popup__link">Акции</a>
+                        <a href="#" class="popup__link">Тарифы</a>
+                        <a href="#" class="popup__link">Пакет услуг</a>
+                        <a href="#" class="popup__link">Дополнительные услуги</a>
+                        <a href="#" class="popup__link">Бонусная программа</a>
+                        <a href="#" class="popup__link">Междугородная связь</a>
+                        <a href="#" class="popup__link">Договоры</a>
+                        <a href="#" class="popup__link">Полезные номера</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
 </body>
 </html>

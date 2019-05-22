@@ -1,0 +1,91 @@
+@import "layout/var";
+
+.footer-bottom {
+  box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.08);
+  padding-bottom: 25px;
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+
+    &--margin {
+      margin-top: 22px;
+    }
+  }
+
+  &__menu {
+    margin-top: 29px;
+    display: flex;
+  }
+
+  &__link {
+    color: $footer-menu;
+    font-size: 14px;
+    line-height: 18px;
+    font-family: $roboto;
+    font-weight: $normal;
+    transition: 0.3s;
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  &__socials {
+    margin-top: 29px;
+    display: flex;
+  }
+
+  &__soc {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    outline: none;
+    border: 1px solid rgba(108, 113, 124, 0.2);
+    border-radius: 4px;
+    margin-left: 10px;
+    transition: 0.3s;
+
+    &:hover {
+      background: rgba(116, 121, 131, 0.1);
+      border-color: rgba(108, 113, 124, 0.2);
+    }
+
+    &:active {
+      background: rgba(116, 121, 131, 0.15);
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__soc-icon {
+    max-height: 16px;
+  }
+
+  &__copyright {
+    font-size: 14px;
+    line-height: 18px;
+    font-family: $roboto;
+    font-weight: $normal;
+    color: $grey-text;
+    align-self: center;
+  }
+
+  &__age {
+    font-size: 20px;
+    line-height: 26px;
+    font-family: $roboto;
+    font-weight: $normal;
+    color: $grey-text;
+  }
+}

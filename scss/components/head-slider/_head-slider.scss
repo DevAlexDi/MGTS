@@ -1,0 +1,69 @@
+@import "layout/var";
+
+.head-slider {
+
+  &__item {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 25%;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: center center no-repeat;
+    background-size: cover;
+  }
+
+  &__arrow {
+    &--prev {
+      left: 25px;
+    }
+
+    &--next {
+      right: 25px;
+    }
+  }
+
+  .slick-dots {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 19px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+
+    li {
+      margin: 0 3px;
+
+      button {
+        color: transparent;
+        font-size: 0;
+        border: 0;
+        background: #fff;
+        opacity: 0.2;
+        width: 6px;
+        height: 6px;
+        padding: 0;
+        border-radius: 50%;
+      }
+
+      &.slick-active {
+        button {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

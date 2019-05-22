@@ -1,0 +1,187 @@
+@import "layout/var";
+
+.connection {
+  background: linear-gradient(0deg, #78B3F7 0%, #529AF0 40%, #1D73D7 100%);
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
+  padding: 27px 0 0;
+
+  &--can {
+    background: linear-gradient(0deg, #FCC6AE 0%, #B380CE 40%, #4469CA 100%);
+    box-shadow: none;
+  }
+
+  &--denied {
+    box-shadow: none;
+    background: url('../img/connection_denied.png') no-repeat center;
+    background-size: cover;
+  }
+
+  &__flex {
+    display: flex;
+  }
+
+  &__home {
+    margin-right: 51px;
+  }
+
+  &__block {
+
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 114.84%;
+    font-family: $Montserrat;
+    color: #A3CDFF;
+    margin-top: 23px;
+
+    &--can {
+      font-size: 30px;
+      text-align: center;
+      color: white;
+    }
+
+    &--denied {
+      color: #CBD7E5;
+      padding-left: 57px;
+      position: relative;
+
+      &:before {
+        display: block;
+        content: '';
+        width: 40px;
+        height: 40px;
+        border: 2px solid white;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    left: 11px;
+    top: 50%;
+    display: block;
+    width: 12.5px;
+    height: 12.5px;
+
+    &:before {
+      display: block;
+      content: '';
+      width: 18px;
+      height: 2px;
+      background: white;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      display: block;
+      content: '';
+      width: 18px;
+      height: 2px;
+      background: white;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__city {
+    color: white;
+    cursor: pointer;
+    border-bottom: 1px dotted white;
+    transition: 0.3s;
+
+    &:hover {
+      border-bottom-color: transparent;
+    }
+  }
+
+  &__form {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 23px;
+  }
+
+  &__field {
+    margin-right: 20px;
+
+    &--big {
+      width: 290px;
+    }
+
+    &--small {
+      width: 120px;
+    }
+  }
+
+  &__text-field {
+    width: 100%;
+  }
+
+  &__helper-text {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    font-family: $roboto;
+    font-weight: $normal;
+    color: rgba(255, 255, 255, 0.87);
+  }
+
+  &__button {
+    margin-top: 8px;
+  }
+}
+
+
+
+.connection__text-field:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
+.connection__text-field:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,
+.connection__text-field:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing {
+  border-color: rgba(255, 255, 255, 0.87);
+}
+.connection__text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--focused) .mdc-text-field__input:hover~.mdc-notched-outline .mdc-notched-outline__leading,
+.connection__text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--focused) .mdc-text-field__input:hover~.mdc-notched-outline .mdc-notched-outline__notch,
+.connection__text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--focused) .mdc-text-field__input:hover~.mdc-notched-outline .mdc-notched-outline__trailing {
+  border-color: rgba(255, 255, 255, 1);
+}
+.connection__text-field.mdc-text-field--focused .mdc-text-field__input~.mdc-notched-outline .mdc-notched-outline__leading,
+.connection__text-field.mdc-text-field--focused .mdc-text-field__input~.mdc-notched-outline .mdc-notched-outline__notch,
+.connection__text-field.mdc-text-field--focused .mdc-text-field__input~.mdc-notched-outline .mdc-notched-outline__trailing {
+  border-color: rgba(255, 255, 255, 1);
+  border-width: 1px;
+}
+.connection__text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: $roboto;
+  letter-spacing: 0.15px;
+  color: rgba(255, 255, 255, 0.87);
+}
+.connection__text-field:not(.mdc-text-field--disabled)+.mdc-text-field-helper-line .mdc-text-field-helper-text {
+  color: rgba(255, 255, 255, 0.87);
+}
+.connection__text-field.mdc-text-field--disabled+.mdc-text-field-helper-line .mdc-text-field-helper-text {
+  opacity: 0.38;
+}
+.connection__text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: $roboto;
+  letter-spacing: 0.15px;
+  color: rgba(255, 255, 255, 0.87);
+}
+.connection__text-field:not(.mdc-text-field--disabled) .mdc-floating-label--float-above {
+  font-size: 14px;
+  top: 20px;
+  transform: scale(1) translateY(-130%);
+}

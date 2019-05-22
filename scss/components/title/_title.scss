@@ -1,0 +1,12 @@
+.title {
+  font-family: $Montserrat;
+  font-style: normal;
+  font-weight: $bold;
+  font-size: 30px;
+  line-height: 114.84%;
+  color: $black;
+
+  &--center {
+    text-align: center;
+  }
+}

@@ -1,0 +1,101 @@
+@import "layout/var";
+
+.advantages {
+  padding: 82px 0 80px;
+
+  &__flex {
+    margin-top: 44px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__image {
+    width: 265px;
+    height: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  &__name {
+    margin-top: 29px;
+    font-family: $roboto;
+    font-weight: $normal;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    color: $black;
+  }
+
+  &__text {
+    margin: 17px auto 0;
+    width: 230px;
+    font-family: $roboto;
+    font-weight: $normal;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: center;
+    color: $grey-text;
+
+    &--small {
+      width: 229px;
+    }
+  }
+
+  &__callback-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+  }
+
+  &__callback {
+    font-size: 16px;
+    line-height: 19px;
+    font-family: $roboto;
+    font-weight: $normal;
+    color: $black;
+    display: inline-block;
+    position: relative;
+    padding: 11px 0 0 57px;
+
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: '';
+      display: block;
+      width: 40px;
+      height: 40px;
+      background: $green;
+      border-radius: 50%;
+    }
+
+    &:after {
+      position: absolute;
+      left: 11px;
+      top: 10px;
+      content: '';
+      display: block;
+      width: 18px;
+      height: 18px;
+      background: url('../img/callback.svg');
+    }
+  }
+
+  &__link {
+    color: $blue;
+    display: inline-block;
+    border-bottom: 1px dotted $blue;
+    transition: 0.3s;
+
+    &:hover {
+      border-bottom-color: transparent;
+      opacity: 0.7;
+    }
+  }
+}

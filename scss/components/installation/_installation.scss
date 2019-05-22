@@ -1,0 +1,142 @@
+@import "layout/var";
+
+.installation {
+  &__image {
+    width: 100%;
+    height: 702px;
+    background: url('../img/installation.png') no-repeat center;
+    background-size: cover;
+    position: absolute;
+    z-index: 0;
+  }
+
+  &__content {
+    z-index: 1;
+    height: 702px;
+    position: relative;
+  }
+
+  &__flex {
+    display: flex;
+  }
+
+  &__left {
+    margin-top: 158px;
+  }
+
+  &__name {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: $roboto;
+    font-weight: $normal;
+    color: #CBD5E0;
+    margin-bottom: 2px;
+
+    &--white {
+      color: white;
+    }
+
+    &--big {
+      font-size: 20px;
+      line-height: 23px;
+      margin-top: 10px;
+      font-weight: 500;
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: $normal;
+    color: white;
+    font-family: $roboto;
+    border-bottom: 1px dotted white;
+    transition: 0.3s;
+
+    &:hover {
+      border-bottom-color: transparent;
+    }
+  }
+
+  &__price {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 33px;
+    font-family: $roboto;
+    color: white;
+
+    &--margin {
+      margin: 10px 0 13px;
+    }
+  }
+
+  &__rub {
+    font-size: 22px;
+  }
+
+  &__middle {
+    margin-top: 163px;
+    margin-left: 131px;
+  }
+
+  &__title {
+    font-family: $Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 114.84%;
+    color: white;
+  }
+
+  &__list {
+    margin: 16px 0 33px;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    font-size: 16px;
+    line-height: 23px;
+    color: white;
+    font-family: $roboto;
+    font-weight: $normal;
+    width: 301px;
+    position: relative;
+    padding-left: 65px;
+    padding-top: 4px;
+    margin-top: 17px;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      background: white;
+      border-radius: 50%;
+      color: #747983;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 30px;
+      font-family: $roboto;
+      text-align: center;
+    }
+
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        &:before {
+          content: '#{$i}';
+        }
+      }
+    }
+  }
+
+  &__right {
+    margin-top: 476px;
+    margin-left: auto;
+  }
+
+
+}

@@ -1,0 +1,126 @@
+@import "layout/var";
+
+.header-top {
+  &__flex {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    align-self: flex-end;
+    margin-bottom: 3px;
+  }
+
+  &__left-links {
+    margin-left: 127px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__link-open {
+    display: block;
+    margin-right: 34px;
+    font-family: $roboto;
+    font-weight: $normal;
+    font-size: 13px;
+    line-height: 15px;
+    color: #42454D;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      display: block;
+      content: '';
+      right: -12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 3.5px 3.5px 0 3.5px;
+      border-color: #42454D transparent transparent transparent;
+    }
+
+    &--location {
+      padding: 0 0 0 18px;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 12px;
+        height: 16px;
+        background: url('../img/location.svg');
+      }
+    }
+  }
+
+  &__right {
+    margin-left: auto;
+    display: flex;
+    padding: 13px 0;
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    margin-right: 7px;
+  }
+
+  &__phone-icon {
+    display: none;
+  }
+
+  &__phone-text {
+    font-size: 20px;
+    line-height: 26px;
+    font-family: $roboto;
+    font-weight: $normal;
+    color: $black;
+    transition: 0.3s;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  &__svg {
+    fill: #747983;
+    transition: 0.3s;
+  }
+
+  &__link {
+    margin-left: 24px;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      .header-top__link-text {
+        color: $blue;
+      }
+      .header-top__svg {
+        fill: $blue;
+      }
+    }
+  }
+
+  &__link-icon {
+    margin-top: 4px;
+  }
+
+  &__link-text {
+    margin-left: 13px;
+    display: block;
+    font-weight: $middle;
+    font-family: $roboto;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #454850;
+    transition: 0.3s;
+  }
+}

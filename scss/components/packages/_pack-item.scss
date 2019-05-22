@@ -1,0 +1,188 @@
+@import "layout/var";
+
+.pack-item {
+  background: white;
+  width: 418px;
+  margin: 14px 16px 0 0;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  padding: 25px 20px 20px 25px;
+
+  &:nth-child(3n+3) {
+    margin-right: 0;
+  }
+
+  &--custom {
+    background: url('../img/pack_custom_bg.png') no-repeat center;
+    background-size: cover;
+    padding: 44px 15% 47px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &--internet {
+    width: 309.5px;
+    padding: 32px 25px 25px 25px;
+
+    &:nth-child(3n+3) {
+      margin-right: 16px;
+    }
+
+    &:nth-child(4n+4) {
+      margin-right: 0;
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+
+    &--internet {
+      margin-bottom: 37px;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    font-family: $roboto;
+    line-height: 21px;
+    font-weight: $normal;
+    color: $footer-menu;
+    margin-left: 35px;
+
+    &--internet {
+      font-size: 18px;
+      font-family: $GoPro;
+      font-weight: 500;
+      line-height: 28px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 32px;
+    font-weight: $normal;
+    font-family: $roboto;
+    color: $black;
+  }
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 17px;
+  }
+
+  &__side {
+    width: 33.33%;
+    border-right: 1px dotted rgba(0,0,0, 0.2);
+    padding: 9px 18px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:nth-child(2) {
+      width: 38%;
+    }
+
+    &:last-child {
+      padding-right: 0;
+      border-right: 0;
+    }
+  }
+
+  &__name {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: $normal;
+    font-family: $roboto;
+    color: rgba(0,0,0, 0.5);
+    height: 32px;
+  }
+
+  &__option {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: $normal;
+    font-family: $roboto;
+    color: $black;
+    margin: 22px 0 0;
+  }
+
+  &__num {
+    font-size: 20px;
+    line-height: 23px;
+
+    &--internet {
+      font-size: 24px;
+      font-family: $GoPro;
+      font-weight: 500;
+      line-height: 28px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+
+    &--internet {
+      margin-top: 35px;
+    }
+  }
+
+  &__price {
+    font-size: 16px;
+    line-height: 28px;
+    font-family: $roboto;
+    color: $grey-text;
+    font-weight: $normal;
+  }
+
+  &__count {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    font-family: $roboto;
+    color: $black;
+  }
+
+  &__sale {
+    text-align: center;
+    font-size: 14px;
+    line-height: 16px;
+    font-family: $roboto;
+    color: white;
+    background: $green;
+    border: 1px solid $green;
+    box-sizing: border-box;
+    border-radius: 12px;
+    padding: 3px 11px;
+    opacity: 0.8;
+    font-weight: $normal;
+  }
+
+
+  &__custom-title {
+    color: white;
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 114.84%;
+    font-family: $Montserrat;
+  }
+
+  &__custom-text {
+    font-size: 16px;
+    line-height: 23px;
+    font-family: $roboto;
+    color: white;
+    margin-top: 25px;
+    font-weight: $normal;
+  }
+
+  &__custom-but {
+    margin-top: auto;
+  }
+}

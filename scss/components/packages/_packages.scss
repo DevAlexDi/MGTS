@@ -1,0 +1,37 @@
+@import "layout/var";
+
+.packages {
+  background: $grey-bg-section;
+  padding: 65px 0 79px;
+
+  &__head {
+    display: flex;
+  }
+
+  &__side {
+    width: 33%;
+  }
+
+  &__switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__switch-text {
+    font-size: 20px;
+    line-height: 23px;
+    font-family: $roboto;
+    font-weight: $normal;
+    color: $black;
+    display: block;
+    margin: 0 17px;
+  }
+
+  &__flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+  }
+
+}

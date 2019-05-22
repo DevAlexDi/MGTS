@@ -1,0 +1,27 @@
+@import "layout/var";
+
+.blue-button {
+  display: inline-block;
+  background: linear-gradient(180deg, #0190DC 0%, $blue 100%);
+  box-shadow: 0px 1px 0px #067CBA;
+  border-radius: 15px;
+  font-family: $roboto;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: white;
+  padding: 9.5px 16px 7.5px;
+  border: 0;
+  transition: 0.3s;
+  text-align: center;
+
+  &:hover, &:focus {
+    background: linear-gradient(180deg, #1AADFC 0%, #0091DE 100%);
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}

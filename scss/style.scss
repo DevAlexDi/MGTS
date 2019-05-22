@@ -1,4 +1,35 @@
+@import "layout/fonts";
 @import "layout/var";
 @import "layout/app";
+//wrapper
+@import "components/wrapper/wrapper";
+//title
+@import "components/title/title";
+//buttons
+@import "components/buttons/blue-button";
+@import "components/buttons/grey-button";
+//popup
+@import "components/popup/popup";
 //header
-@import "components/header/header";
+@import "components/header/header-top";
+@import "components/header/header-bottom";
+//head slider
+@import "components/head-slider/head-slider";
+//connection
+@import "components/connection/connection";
+//packages
+@import "components/packages/packages";
+@import "components/packages/pack-checkbox";
+@import "components/packages/pack-item";
+//advantages
+@import "components/advantages/advantages";
+//installation
+@import "components/installation/installation";
+//services
+@import "components/services/services";
+//news
+@import "components/news/news";
+//footer
+@import "components/footer/footer-top";
+@import "components/footer/footer-bottom";
+
