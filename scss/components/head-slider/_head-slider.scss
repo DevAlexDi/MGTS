@@ -27,10 +27,18 @@
   &__arrow {
     &--prev {
       left: 25px;
+
+      @media (max-width: 1500px) {
+        left: 10px;
+      }
     }
 
     &--next {
       right: 25px;
+
+      @media (max-width: 1500px) {
+        right: 25px;
+      }
     }
   }
 
@@ -43,6 +51,10 @@
     padding: 0;
     list-style: none;
     display: flex;
+
+    @media (max-width: $md-big) {
+      bottom: 13px;
+    }
 
     li {
       margin: 0 3px;

@@ -8,12 +8,20 @@
     background-size: cover;
     position: absolute;
     z-index: 0;
+
+    @media (max-width: $md-big) {
+      height: 500px;
+    }
   }
 
   &__content {
     z-index: 1;
     height: 702px;
     position: relative;
+
+    @media (max-width: $md-big) {
+      height: 500px;
+    }
   }
 
   &__flex {
@@ -22,6 +30,10 @@
 
   &__left {
     margin-top: 158px;
+
+    @media (max-width: $md-big) {
+      margin-top: 60px;
+    }
   }
 
   &__name {
@@ -77,6 +89,11 @@
   &__middle {
     margin-top: 163px;
     margin-left: 131px;
+
+    @media (max-width: $md-big) {
+      margin-top: 65px;
+      margin-left: 85px;
+    }
   }
 
   &__title {
@@ -136,6 +153,10 @@
   &__right {
     margin-top: 476px;
     margin-left: auto;
+
+    @media (max-width: $md-big) {
+      margin-top: 378px;
+    }
   }
 
 

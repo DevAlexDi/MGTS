@@ -26,6 +26,10 @@
     &--cam {
       margin-right: 83px;
 
+      @media (max-width: $md-big) {
+        margin-right: 47px;
+      }
+
       &:before {
         background: url('../img/footer_icon1.svg');
       }
@@ -33,6 +37,10 @@
 
     &--mgts {
       margin-right: 85px;
+
+      @media (max-width: $md-big) {
+        margin-right: 55px;
+      }
 
       &:before {
         background: url('../img/footer_icon2.svg');

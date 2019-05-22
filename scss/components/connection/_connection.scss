@@ -16,6 +16,12 @@
     background-size: cover;
   }
 
+  &__wrapper {
+    @media (max-width: $md-big) {
+      margin-left: 7px;
+    }
+  }
+
   &__flex {
     display: flex;
   }
