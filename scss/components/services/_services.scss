@@ -3,12 +3,22 @@
 .services {
   padding: 64px 0 0;
 
+  @media (max-width: $md) {
+    padding-top: 50px;
+  }
+
   &__flex {
     display: flex;
     justify-content: space-between;
 
     &--wrap {
       flex-wrap: wrap;
+    }
+
+    &--for_half {
+      @media (max-width: $md) {
+        justify-content: flex-start;
+      }
     }
   }
 
@@ -18,7 +28,7 @@
     flex-shrink: 0;
     height: 230px;
     margin: 16px 16px 0 0;
-    padding: 23px 210px 23px 27px;
+    padding: 23px 208px 23px 27px;
     background-size: cover;
     background-position: center;
 
@@ -26,6 +36,13 @@
       width: 391px;
       margin-right: 15px;
       padding-right: 180px;
+    }
+
+    @media (max-width: $md) {
+      width: 476px;
+      margin-right: 10px;
+      margin-top: 10px;
+      padding: 21px 266px 21px 26px;
     }
 
     &--no_margin_right {
@@ -36,10 +53,15 @@
       padding: 34px 42px 34px 32px;
       background: url('../img/serv1.png') no-repeat center;
       background-size: cover;
-      height: auto;
+      height: calc(100% - 16px);
 
       @media (max-width: $md-big) {
         padding-right: 30px;
+      }
+
+      @media (max-width: $md) {
+        height: calc(100% - 250px);
+        padding: 31px 42px 31px 32px;
       }
     }
 
@@ -49,6 +71,10 @@
 
       @media (max-width: $md-big) {
         padding-right: 225px;
+      }
+
+      @media (max-width: $md) {
+        padding-right: 300px;
       }
     }
 
@@ -73,12 +99,21 @@
     font-family: $roboto;
     color: $black;
 
+    @media (max-width: $md) {
+      font-size: 18px;
+      line-height: 25px;
+    }
+
     &--left {
       color: white;
       font-size: 30px;
       line-height: 114.84%;
       font-family: $Montserrat;
       font-weight: $bold;
+
+      @media (max-width: $md) {
+        font-size: 26px;
+      }
     }
   }
 
@@ -90,12 +125,23 @@
     color: $footer-menu;
     margin-top: 17px;
 
+    @media (max-width: $md) {
+      margin-top: 14px;
+    }
+
     &--left {
       font-size: 20px;
       line-height: 28px;
       color: white;
       margin-top: 20px;
       margin-right: 8px;
+
+      @media (max-width: $md) {
+        font-size: 18px;
+        line-height: 25px;
+        margin-right: 155px;
+        margin-top: 26px;
+      }
     }
 
     &--left_half {
@@ -107,6 +153,16 @@
 
       @media (max-width: $md-big) {
         width: 49%;
+      }
+
+      @media (max-width: $md) {
+        width: 39%;
+      }
+
+      &:first-child {
+        @media (max-width: $md) {
+          margin-right: 25px;
+        }
       }
     }
 

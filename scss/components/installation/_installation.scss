@@ -12,6 +12,10 @@
     @media (max-width: $md-big) {
       height: 500px;
     }
+
+    @media (max-width: $md) {
+      height: 400px;
+    }
   }
 
   &__content {
@@ -21,6 +25,10 @@
 
     @media (max-width: $md-big) {
       height: 500px;
+    }
+
+    @media (max-width: $md) {
+      height: 400px;
     }
   }
 
@@ -33,6 +41,10 @@
 
     @media (max-width: $md-big) {
       margin-top: 60px;
+    }
+
+    @media (max-width: $md) {
+      margin-top: 42px;
     }
   }
 
@@ -71,7 +83,7 @@
   }
 
   &__price {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 28px;
     line-height: 33px;
     font-family: $roboto;
@@ -94,6 +106,11 @@
       margin-top: 65px;
       margin-left: 85px;
     }
+
+    @media (max-width: $md) {
+      margin-top: 43px;
+      margin-left: 45px;
+    }
   }
 
   &__title {
@@ -103,12 +120,20 @@
     font-size: 30px;
     line-height: 114.84%;
     color: white;
+
+    @media (max-width: $md) {
+      font-size: 26px;
+    }
   }
 
   &__list {
     margin: 16px 0 33px;
     padding: 0;
     list-style: none;
+
+    @media (max-width: $md) {
+      margin: 7px 0 25px;
+    }
   }
 
   &__item {
@@ -122,6 +147,12 @@
     padding-left: 65px;
     padding-top: 4px;
     margin-top: 17px;
+
+    @media (max-width: $md) {
+      margin-top: 10px;
+      width: 265px;
+      padding-left: 55px;
+    }
 
     &:before {
       content: '';
@@ -156,6 +187,10 @@
 
     @media (max-width: $md-big) {
       margin-top: 378px;
+    }
+
+    @media (max-width: $md) {
+      margin-top: 293px;
     }
   }
 

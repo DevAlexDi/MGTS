@@ -6,6 +6,10 @@
   line-height: 114.84%;
   color: $black;
 
+  @media (max-width: $md) {
+    font-size: 26px;
+  }
+
   &--center {
     text-align: center;
   }

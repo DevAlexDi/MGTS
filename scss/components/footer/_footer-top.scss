@@ -13,6 +13,11 @@
     padding-left: 92px;
     position: relative;
 
+    @media (max-width: $md) {
+      padding-left: 75px;
+      width: 345px;
+    }
+
     &:before {
       position: absolute;
       content: '';
@@ -21,6 +26,12 @@
       top: 0;
       width: 64px;
       height: 64px;
+      background-size: cover;
+
+      @media (max-width: $md) {
+        width: 53px;
+        height: 53px;
+      }
     }
 
     &--cam {
@@ -31,7 +42,7 @@
       }
 
       &:before {
-        background: url('../img/footer_icon1.svg');
+        background-image: url('../img/footer_icon1.svg');
       }
     }
 
@@ -43,7 +54,7 @@
       }
 
       &:before {
-        background: url('../img/footer_icon2.svg');
+        background-image: url('../img/footer_icon2.svg');
       }
     }
   }
@@ -54,6 +65,11 @@
     font-weight: $normal;
     font-size: 20px;
     line-height: 26px;
+
+    @media (max-width: $md) {
+      font-size: 18px;
+      line-height: 23px;
+    }
   }
 
   &__text {
@@ -64,11 +80,20 @@
     font-size: 14px;
     line-height: 20px;
     height: 46px;
+
+    @media (max-width: $md) {
+      margin-top: 7px;
+      height: 62px;
+    }
   }
 
   &__apps {
     margin-top: 14px;
     display: flex;
+
+    @media (max-width: $md) {
+      margin-left: -75px;
+    }
   }
 
   &__app {
@@ -89,6 +114,10 @@
     outline: none;
     transition: 0.3s;
     padding: 8px;
+
+    @media (max-width: $md) {
+      margin-right: 15px;
+    }
 
     &:hover {
       background: rgba(116, 121, 131, 0.1);
@@ -141,6 +170,11 @@
     font-family: $roboto;
     color: $grey-text;
     font-weight: $normal;
+
+    @media (max-width: $md) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__phone {
@@ -160,6 +194,10 @@
   &__callback {
     transition: 0.3s;
 
+    @media (max-width: $md) {
+      display: none;
+    }
+
     &:hover {
       opacity: 0.7;
     }
@@ -169,6 +207,10 @@
     display: flex;
     margin-top: 30px;
     align-items: center;
+
+    @media (max-width: $md) {
+      margin-top: auto;
+    }
   }
 
   &__ask-text {

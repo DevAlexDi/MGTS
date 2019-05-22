@@ -3,6 +3,10 @@
 .news {
   padding: 60px 0 66px;
 
+  @media (max-width: $md) {
+    padding-bottom: 60px;
+  }
+
   &__flex {
     display: flex;
     margin-top: 36px;
@@ -12,6 +16,10 @@
   &__item {
     position: relative;
     z-index: 0;
+
+    @media (max-width: $md) {
+      width: 280px;
+    }
   }
 
   &__date {

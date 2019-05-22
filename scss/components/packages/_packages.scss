@@ -4,18 +4,30 @@
   background: $grey-bg-section;
   padding: 65px 0 79px;
 
+  @media (max-width: $md) {
+    padding-bottom: 60px;
+  }
+
   &__head {
     display: flex;
   }
 
   &__side {
     width: 33%;
+
+    @media (max-width: $md) {
+      width: 31.5%;
+    }
   }
 
   &__switch {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: $md) {
+      width: 37%;
+    }
   }
 
   &__switch-text {
@@ -26,6 +38,11 @@
     color: $black;
     display: block;
     margin: 0 17px;
+
+    @media (max-width: $md) {
+      font-size: 18px;
+      line-height: 21px;
+    }
   }
 
   &__flex {

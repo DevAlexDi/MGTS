@@ -3,6 +3,10 @@
 .advantages {
   padding: 82px 0 80px;
 
+  @media (max-width: $md) {
+    padding: 56px 0 60px;
+  }
+
   &__flex {
     margin-top: 44px;
     display: flex;
@@ -20,6 +24,11 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+
+    @media (max-width: $md) {
+      width: 212px;
+      height: 140px;
+    }
   }
 
   &__name {
@@ -30,6 +39,11 @@
     line-height: 28px;
     text-align: center;
     color: $black;
+
+    @media (max-width: $md) {
+      font-size: 18px;
+      line-height: 25px;
+    }
   }
 
   &__text {
@@ -41,6 +55,10 @@
     line-height: 23px;
     text-align: center;
     color: $grey-text;
+
+    @media (max-width: $md) {
+      width: 225px;
+    }
 
     &--small {
       width: 229px;

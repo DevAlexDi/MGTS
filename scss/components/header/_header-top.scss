@@ -13,6 +13,11 @@
     background: $grey-text;
     display: block;
     content: '';
+
+    @media (max-width: $md) {
+      left: 183px;
+      right: -200px;
+    }
   }
 
   &__flex {
@@ -30,6 +35,10 @@
     display: flex;
     align-items: center;
     position: relative;
+
+    @media (max-width: $md) {
+      margin-left: 66px;
+    }
   }
 
   &__link-open {
@@ -82,10 +91,21 @@
     display: flex;
     align-items: center;
     margin-right: 7px;
+
+    &:hover {
+      .header-top__svg {
+        fill: $blue;
+      }
+    }
   }
 
   &__phone-icon {
     display: none;
+    margin-top: 3px;
+
+    @media (max-width: $md) {
+      display: block;
+    }
   }
 
   &__phone-text {
@@ -95,6 +115,10 @@
     font-weight: $normal;
     color: $black;
     transition: 0.3s;
+
+    @media (max-width: $md) {
+      display: none;
+    }
 
     &:hover {
       color: $blue;
