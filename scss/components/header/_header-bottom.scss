@@ -35,6 +35,12 @@
       color: $blue;
     }
 
+    &--hidden_sm {
+      @media (max-width: $sm) {
+        display: none;
+      }
+    }
+
     &--more {
 
       &:after {

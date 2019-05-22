@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+    var ww = $(window).width();
+
     $('.head-slider').slick({
         dots: true,
         arrows: true,
@@ -24,23 +26,25 @@ $(document).ready(function(){
         mdc.textField.MDCTextField.attachTo(this);
     });
 
-    $('.news-slider').slick({
-        dots: false,
-        arrows: true,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        infinite: false,
-        prevArrow: '<button type="button" class="slick-prev news__arrow news__arrow--prev"></button>',
-        nextArrow: '<button type="button" class="slick-next news__arrow news__arrow--next"></button>',
-        responsive: [
-            {
-              breakpoint: 1280,
-              settings: {
-                slidesToShow: 3
-              }
-            }
-        ]
-    });
+    if (ww > 1023) {
+        $('.news-slider').slick({
+            dots: false,
+            arrows: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            infinite: false,
+            prevArrow: '<button type="button" class="slick-prev news__arrow news__arrow--prev"></button>',
+            nextArrow: '<button type="button" class="slick-next news__arrow news__arrow--next"></button>',
+            responsive: [
+                {
+                    breakpoint: 1280,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                }
+            ]
+        });
+    }
 
     $('#packages-checkbox').change(function(e) {
         if ($(this).prop('checked')) {
@@ -52,6 +56,62 @@ $(document).ready(function(){
             $('#service_packs').fadeIn(1500);
         }
     });
+
+
+
+    // media
+
+    if (ww < 1280) {
+        $('.services__left').append($('.services__item--4'));
+
+        if (ww < 1024) {
+            $('.footer-top__contacts').append($('.footer-bottom__socials'));
+        }
+    }
+
+    $(window).resize(function(e) {
+        ww = $(window).width();
+
+        if (ww < 1280) {
+            $('.services__left').append($('.services__item--4'));
+
+            if (ww < 1024) {
+                $('.news-slider.slick-slider').slick('unslick');
+                $('.footer-top__contacts').append($('.footer-bottom__socials'));
+            }
+        }
+        else {
+            $('.services__item--3').after($('.services__item--4'));
+        }
+
+        if (ww > 1023) {
+            if (!$('.news-slider').hasClass('slick-slider')) {
+                $('.news-slider').slick({
+                    dots: false,
+                    arrows: true,
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    infinite: false,
+                    prevArrow: '<button type="button" class="slick-prev news__arrow news__arrow--prev"></button>',
+                    nextArrow: '<button type="button" class="slick-next news__arrow news__arrow--next"></button>',
+                    responsive: [
+                        {
+                            breakpoint: 1280,
+                            settings: {
+                                slidesToShow: 3
+                            }
+                        }
+                    ]
+                });
+            }
+
+            $('.footer-bottom__menu').after($('.footer-bottom__socials'));
+        }
+    });
+
+
+
+
 
     // POPUP MENUS
 
@@ -65,8 +125,13 @@ $(document).ready(function(){
         var order = $(menu).index();
         var left_position = 0;
 
-        if (order > 1) {
-            left_position = -((order-1) * 284) - 654;
+        if (ww > 1023) {
+            if (order > 1) {
+                left_position = -((order - 1) * 284) - 654;
+            }
+            else {
+                left_position = -(order * 284);
+            }
         }
         else {
             left_position = -(order * 284);
@@ -102,20 +167,7 @@ $(document).ready(function(){
 
 
 
-    // media
 
-    if ($(window).width() < 1280) {
-        $('.services__left').append($('.services__item--4'));
-    }
-
-    $(window).resize(function(e) {
-        if ($(window).width() < 1280) {
-            $('.services__left').append($('.services__item--4'));
-        }
-        else {
-            $('.services__item--3').after($('.services__item--4'));
-        }
-    });
 
 });
 

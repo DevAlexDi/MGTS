@@ -11,10 +11,19 @@
     margin-top: 44px;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: $sm) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__item {
     text-align: center;
+
+    @media (max-width: $sm) {
+      width: 42%;
+    }
   }
 
   &__image {

@@ -18,6 +18,10 @@
       left: 183px;
       right: -200px;
     }
+
+    @media (max-width: $sm) {
+      left: 188px;
+    }
   }
 
   &__flex {
@@ -38,6 +42,10 @@
 
     @media (max-width: $md) {
       margin-left: 66px;
+    }
+
+    @media (max-width: $sm) {
+      margin-left: 71px;
     }
   }
 
@@ -91,6 +99,10 @@
     display: flex;
     align-items: center;
     margin-right: 7px;
+
+    @media (max-width: $sm) {
+      margin-right: 0;
+    }
 
     &:hover {
       .header-top__svg {
@@ -160,5 +172,9 @@
     text-transform: uppercase;
     color: #454850;
     transition: 0.3s;
+
+    @media (max-width: $sm) {
+      display: none;
+    }
   }
 }

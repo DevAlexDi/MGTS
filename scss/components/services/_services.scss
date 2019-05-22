@@ -45,6 +45,11 @@
       padding: 21px 266px 21px 26px;
     }
 
+    @media (max-width: $sm) {
+      width: 357px;
+      padding-right: 148px;
+    }
+
     &--no_margin_right {
       margin-right: 0;
     }
@@ -75,6 +80,10 @@
 
       @media (max-width: $md) {
         padding-right: 300px;
+      }
+
+      @media (max-width: $sm) {
+        padding-right: 190px;
       }
     }
 
@@ -141,6 +150,10 @@
         line-height: 25px;
         margin-right: 155px;
         margin-top: 26px;
+      }
+
+      @media (max-width: $sm) {
+        margin-right: 0;
       }
     }
 

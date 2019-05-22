@@ -95,8 +95,17 @@
       column-count: 2;
       break-inside: avoid;
 
+      @media (max-width: $sm) {
+        width: 280px;
+        column-count: 1;
+      }
+
       .popup__link {
         width: 325px;
+
+        @media (max-width: $sm) {
+          width: 100%;
+        }
       }
     }
 

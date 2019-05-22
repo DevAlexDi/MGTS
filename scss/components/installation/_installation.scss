@@ -16,6 +16,12 @@
     @media (max-width: $md) {
       height: 400px;
     }
+
+    @media (max-width: $sm) {
+      height: 378px;
+      position: relative;
+      background-image: url('../img/installation_sm.png');
+    }
   }
 
   &__content {
@@ -29,6 +35,10 @@
 
     @media (max-width: $md) {
       height: 400px;
+    }
+
+    @media (max-width: $sm) {
+      height: auto;
     }
   }
 
@@ -45,6 +55,10 @@
 
     @media (max-width: $md) {
       margin-top: 42px;
+    }
+
+    @media (max-width: $sm) {
+      display: none;
     }
   }
 
@@ -111,6 +125,11 @@
       margin-top: 43px;
       margin-left: 45px;
     }
+
+    @media (max-width: $sm) {
+      margin: 28px 0 0;
+      width: 100%;
+    }
   }
 
   &__title {
@@ -124,6 +143,11 @@
     @media (max-width: $md) {
       font-size: 26px;
     }
+
+    @media (max-width: $sm) {
+      color: $black;
+      text-align: center;
+    }
   }
 
   &__list {
@@ -133,6 +157,12 @@
 
     @media (max-width: $md) {
       margin: 7px 0 25px;
+    }
+
+    @media (max-width: $sm) {
+      margin: 38px 0 0;
+      display: flex;
+      justify-content: space-between;
     }
   }
 
@@ -154,6 +184,14 @@
       padding-left: 55px;
     }
 
+    @media (max-width: $sm) {
+      width: 215px;
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 14px;
+      line-height: 20px;
+      padding-left: 45px;
+    }
+
     &:before {
       content: '';
       display: block;
@@ -170,6 +208,10 @@
       line-height: 30px;
       font-family: $roboto;
       text-align: center;
+
+      @media (max-width: $sm) {
+        border: 1px solid $grey-text;
+      }
     }
 
     @for $i from 1 through 3 {
@@ -178,6 +220,12 @@
           content: '#{$i}';
         }
       }
+    }
+  }
+
+  &__button {
+    @media (max-width: $sm) {
+      display: none;
     }
   }
 
@@ -191,6 +239,10 @@
 
     @media (max-width: $md) {
       margin-top: 293px;
+    }
+
+    @media (max-width: $sm) {
+      display: none;
     }
   }
 

@@ -8,6 +8,10 @@
     padding-bottom: 20px;
   }
 
+  @media (max-width: $sm) {
+    padding-bottom: 11px;
+  }
+
   &__flex {
     display: flex;
     justify-content: space-between;
@@ -29,6 +33,11 @@
       margin-top: 20px;
       flex-wrap: wrap;
       margin-right: 120px;
+    }
+
+    @media (max-width: $sm) {
+      margin-top: 23px;
+      margin-right: 0;
     }
   }
 
@@ -60,6 +69,10 @@
 
     @media (max-width: $md) {
       margin-top: 20px;
+    }
+
+    @media (max-width: $sm) {
+      margin-left: auto;
     }
   }
 
@@ -100,6 +113,7 @@
     font-family: $roboto;
     font-weight: $normal;
     color: $grey-text;
+    opacity: 0.5;
     align-self: center;
   }
 

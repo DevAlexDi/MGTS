@@ -3,9 +3,18 @@
 .footer-top {
   box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.08);
   padding: 40px 0;
+  overflow: hidden;
+
+  @media (max-width: $sm) {
+    padding-bottom: 29px;
+  }
 
   &__flex {
     display: flex;
+
+    @media (max-width: $sm) {
+      flex-wrap: wrap;
+    }
   }
 
   &__side {
@@ -16,6 +25,12 @@
     @media (max-width: $md) {
       padding-left: 75px;
       width: 345px;
+    }
+
+    @media (max-width: $sm) {
+      width: 315px;
+      padding-left: 70px;
+      margin-bottom: 39px;
     }
 
     &:before {
@@ -41,6 +56,10 @@
         margin-right: 47px;
       }
 
+      @media (max-width: $sm) {
+        margin-right: 53px;
+      }
+
       &:before {
         background-image: url('../img/footer_icon1.svg');
       }
@@ -51,6 +70,10 @@
 
       @media (max-width: $md-big) {
         margin-right: 55px;
+      }
+
+      @media (max-width: $sm) {
+        margin-right: 0;
       }
 
       &:before {
@@ -93,6 +116,10 @@
 
     @media (max-width: $md) {
       margin-left: -75px;
+    }
+
+    @media (max-width: $sm) {
+      margin-left: -70px;
     }
   }
 
@@ -175,6 +202,31 @@
       display: flex;
       flex-direction: column;
     }
+
+    @media (max-width: $sm) {
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      position: relative;
+      padding-top: 24px;
+
+      &:before {
+        position: absolute;
+        display: block;
+        content: '';
+        top: 0;
+        left: -300px;
+        width: calc(100% + 600px);
+        height: 1px;
+        background: rgba(0, 0, 0, 0.08);
+      }
+    }
+  }
+
+  &__call {
+    @media (max-width: $sm) {
+      margin-right: 67px;
+    }
   }
 
   &__phone {
@@ -185,6 +237,10 @@
     font-family: $roboto;
     font-weight: $normal;
     transition: 0.3s;
+
+    @media (max-width: $sm) {
+      margin-top: 8px;
+    }
 
     &:hover {
       color: $blue;

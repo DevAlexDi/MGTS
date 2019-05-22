@@ -2,6 +2,7 @@
 
 .news {
   padding: 60px 0 66px;
+  overflow: hidden;
 
   @media (max-width: $md) {
     padding-bottom: 60px;
@@ -11,6 +12,12 @@
     display: flex;
     margin-top: 36px;
     position: relative;
+
+    @media (max-width: $sm) {
+      margin-top: 45px;
+      overflow: auto;
+      width: calc(100% + 300px);
+    }
   }
 
   &__item {
@@ -19,6 +26,12 @@
 
     @media (max-width: $md) {
       width: 280px;
+    }
+
+    @media (max-width: $sm) {
+      width: 265px;
+      margin-right: 37px;
+      flex-shrink: 0;
     }
   }
 

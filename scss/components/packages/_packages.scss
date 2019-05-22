@@ -10,6 +10,10 @@
 
   &__head {
     display: flex;
+
+    @media (max-width: $sm) {
+      justify-content: space-between;
+    }
   }
 
   &__side {
@@ -17,6 +21,10 @@
 
     @media (max-width: $md) {
       width: 31.5%;
+    }
+
+    @media (max-width: $sm) {
+      width: 50%;
     }
   }
 
@@ -27,6 +35,10 @@
 
     @media (max-width: $md) {
       width: 37%;
+    }
+
+    @media (max-width: $sm) {
+      width: 50%;
     }
   }
 
@@ -49,6 +61,13 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 25px;
+
+    @media (max-width: $sm) {
+      margin-top: 35px;
+      flex-wrap: nowrap;
+      overflow: auto;
+      width: calc(100% + 23px);
+    }
   }
 
 }
