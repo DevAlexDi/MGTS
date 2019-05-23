@@ -7,6 +7,10 @@
     padding: 56px 0 60px;
   }
 
+  @media (max-width: $xs) {
+    padding: 42px 0 50px;
+  }
+
   &__flex {
     margin-top: 44px;
     display: flex;
@@ -16,6 +20,11 @@
       flex-wrap: wrap;
       justify-content: center;
     }
+
+    @media (max-width: $xs) {
+      justify-content: space-between;
+      margin-top: 29px;
+    }
   }
 
   &__item {
@@ -23,6 +32,28 @@
 
     @media (max-width: $sm) {
       width: 42%;
+      margin-top: 15px;
+    }
+
+    @media (max-width: $xs) {
+      min-width: 165px;
+      width: 50%;
+    }
+
+    &:nth-child(3) {
+      .advantages__name {
+        @media (max-width: $xs) {
+          padding: 0 30px;
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      .advantages__name {
+        @media (max-width: $xs) {
+          padding: 0 50px;
+        }
+      }
     }
   }
 
@@ -38,6 +69,17 @@
       width: 212px;
       height: 140px;
     }
+
+    @media (max-width: $xs) {
+      width: 165px;
+      height: 109px;
+    }
+
+    img {
+      @media (max-width: $xs) {
+        max-height: 100%;
+      }
+    }
   }
 
   &__name {
@@ -52,6 +94,11 @@
     @media (max-width: $md) {
       font-size: 18px;
       line-height: 25px;
+    }
+
+    @media (max-width: $xs) {
+      margin-top: 15px;
+      padding: 0 20px;
     }
   }
 
@@ -69,8 +116,19 @@
       width: 225px;
     }
 
+    @media (max-width: $xs) {
+      font-size: 14px;
+      line-height: 20px;
+      margin-top: 15px;
+      width: 165px;
+    }
+
     &--small {
       width: 229px;
+
+      @media (max-width: $xs) {
+        width: 165px;
+      }
     }
   }
 
@@ -89,6 +147,12 @@
     display: inline-block;
     position: relative;
     padding: 11px 0 0 57px;
+
+    @media (max-width: $xs) {
+      line-height: 23px;
+      padding: 0 0 0 62px;
+      width: 320px;
+    }
 
     &:before {
       position: absolute;

@@ -8,6 +8,10 @@
     padding-bottom: 60px;
   }
 
+  @media (max-width: $xs) {
+    padding: 67px 0 34px;
+  }
+
   &__flex {
     display: flex;
     margin-top: 36px;
@@ -17,6 +21,10 @@
       margin-top: 45px;
       overflow: auto;
       width: calc(100% + 300px);
+    }
+
+    @media (max-width: $xs) {
+      margin-top: 28px;
     }
   }
 
@@ -32,6 +40,11 @@
       width: 265px;
       margin-right: 37px;
       flex-shrink: 0;
+    }
+
+    @media (max-width: $xs) {
+      width: 235px;
+      margin-right: 35px;
     }
   }
 

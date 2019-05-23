@@ -30,11 +30,22 @@
     flex-direction: column;
   }
 
+  @media (max-width: $xs) {
+    width: 313px;
+    margin-right: 11px;
+    padding: 22px 20px 20px;
+    order: 1;
+  }
+
   &:nth-child(3n+3) {
     margin-right: 0;
 
     @media (max-width: $sm) {
       margin-right: 8px;
+    }
+
+    @media (max-width: $xs) {
+      margin-right: 11px;
     }
   }
 
@@ -59,6 +70,12 @@
       background-position: center right -130px;
       padding-right: 20px;
     }
+
+    @media (max-width: $xs) {
+      order: 0;
+      background-position: center right -55px;
+      padding-right: 50px;
+    }
   }
 
   &--internet {
@@ -72,6 +89,11 @@
     @media (max-width: $md) {
       width: 232.25px;
       padding: 25px 20px 20px;
+    }
+
+    @media (max-width: $xs) {
+      width: 289.5px;
+      margin-right: 11px;
     }
 
     &:nth-child(3n+3) {
@@ -88,6 +110,10 @@
 
     &:nth-child(4n+4) {
       margin-right: 0;
+
+      @media (max-width: $xs) {
+        margin-right: 11px;
+      }
     }
   }
 
@@ -97,6 +123,10 @@
 
     @media (max-width: $sm) {
       flex-direction: column;
+    }
+
+    @media (max-width: $xs) {
+      flex-direction: row;
     }
 
     &--internet {
@@ -132,6 +162,11 @@
       align-self: flex-start;
     }
 
+    @media (max-width: $xs) {
+      margin-top: 0;
+      margin-left: 18px;
+    }
+
     &--internet {
       font-size: 18px;
       font-family: $GoPro;
@@ -140,6 +175,10 @@
 
       @media (max-width: $md-big) {
         margin-left: 24px;
+      }
+
+      @media (max-width: $xs) {
+        margin-top: 10px;
       }
     }
   }
@@ -231,6 +270,10 @@
     @media (max-width: $sm) {
       width: 80px;
     }
+
+    @media (max-width: $xs) {
+      width: 90px;
+    }
   }
 
   &__options {
@@ -294,6 +337,12 @@
       margin-top: auto;
     }
 
+    @media (max-width: $xs) {
+      padding-top: 38px;
+      flex-direction: row;
+      align-items: center;
+    }
+
     &--internet {
       margin-top: 35px;
 
@@ -311,6 +360,10 @@
     @media (max-width: $sm) {
       order: 2;
     }
+
+    @media (max-width: $xs) {
+      order: 0;
+    }
   }
 
   &__price {
@@ -327,6 +380,10 @@
     @media (max-width: $sm) {
       order: 1;
       margin: 13px 0;
+    }
+
+    @media (max-width: $xs) {
+      margin: 4px 0 0;
     }
 
     &--internet {
@@ -382,6 +439,13 @@
       order: 0;
       top: 0;
       left: 0;
+    }
+
+    @media (max-width: $xs) {
+      position: absolute;
+      top: 19px;
+      right: 31px;
+      left: auto;
     }
   }
 

@@ -3,9 +3,14 @@
 .packages {
   background: $grey-bg-section;
   padding: 65px 0 79px;
+  overflow: hidden;
 
   @media (max-width: $md) {
     padding-bottom: 60px;
+  }
+
+  @media (max-width: $xs) {
+    padding: 33px 0 45px;
   }
 
   &__head {
@@ -13,6 +18,10 @@
 
     @media (max-width: $sm) {
       justify-content: space-between;
+    }
+
+    @media (max-width: $xs) {
+      flex-direction: column;
     }
   }
 
@@ -25,6 +34,10 @@
 
     @media (max-width: $sm) {
       width: 50%;
+    }
+
+    @media (max-width: $xs) {
+      width: 100%;
     }
   }
 
@@ -39,6 +52,12 @@
 
     @media (max-width: $sm) {
       width: 50%;
+    }
+
+    @media (max-width: $xs) {
+      width: 100%;
+      justify-content: flex-start;
+      margin-top: 10px;
     }
   }
 
@@ -55,6 +74,26 @@
       font-size: 18px;
       line-height: 21px;
     }
+
+    &:first-child {
+      @media (max-width: $xs) {
+        margin-left: 0;
+      }
+    }
+
+    &:last-child {
+      @media (max-width: $xs) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__block {
+    @media (max-width: $sm) {
+      overflow: auto;
+      width: calc(100% + 23px);
+      position: relative;
+    }
   }
 
   &__flex {
@@ -66,7 +105,12 @@
       margin-top: 35px;
       flex-wrap: nowrap;
       overflow: auto;
-      width: calc(100% + 23px);
+      float: left;
+    }
+
+    @media (max-width: $xs) {
+      margin-top: 30px;
+      flex-direction: row-reverse;
     }
   }
 

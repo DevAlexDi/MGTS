@@ -57,3 +57,27 @@ footer {
 .slick-next {
     background-image: url('../img/next.svg');
 }
+
+.opened-menu {
+    overflow: hidden;
+}
+
+.mobile-black-bg {
+    position: fixed;
+    content: '';
+    background: $black;
+    opacity: 0;
+    width: 100vw;
+    height: 100vh;
+    top: 55px;
+    right: 0;
+    display: block;
+    z-index: 9000;
+    transition: 0.3s;
+    pointer-events: none;
+
+    &--show {
+        opacity: 0.7;
+        pointer-events: auto;
+    }
+}
