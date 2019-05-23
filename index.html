@@ -794,6 +794,163 @@
         </div>
     </div>
 
+    <div class="modal fade" id="request-modal" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal__flex">
+                <div class="modal__left">
+                    <div class="modal__title">Заявка <br>на подключение услуг</div>
+                </div>
+                <div class="modal__content">
+                    <span class="modal__close" data-dismiss="modal" aria-label="Close"></span>
+
+                    <p class="modal__text">Оставьте свои контактные данные, чтобы мы могли уточнить детали подключения: мы свяжемся с Вами в ближайшее время.</p>
+
+                    <form action="" class="modal__form">
+                        <div class="modal__field">
+                            <div class="mdc-text-field mdc-text-field--outlined modal__text-field">
+                                <input type="text" id="name" class="mdc-text-field__input" required>
+                                <div class="mdc-notched-outline">
+                                    <div class="mdc-notched-outline__leading"></div>
+                                    <div class="mdc-notched-outline__notch">
+                                        <label for="street" class="mdc-floating-label">ФИО</label>
+                                    </div>
+                                    <div class="mdc-notched-outline__trailing"></div>
+                                </div>
+                            </div>
+                            <div class="mdc-text-field-helper-line">
+                                <div class="mdc-text-field-helper-text">Вспомогательный текст, если нужен</div>
+                            </div>
+                        </div>
+                        <div class="modal__field">
+                            <div class="mdc-text-field mdc-text-field--outlined modal__text-field">
+                                <input type="text" id="name" class="mdc-text-field__input" required>
+                                <div class="mdc-notched-outline">
+                                    <div class="mdc-notched-outline__leading"></div>
+                                    <div class="mdc-notched-outline__notch">
+                                        <label for="street" class="mdc-floating-label">Контактный телефон</label>
+                                    </div>
+                                    <div class="mdc-notched-outline__trailing"></div>
+                                </div>
+                            </div>
+                            <div class="mdc-text-field-helper-line">
+                                <div class="mdc-text-field-helper-text">Вспомогательный текст, если нужен</div>
+                            </div>
+                        </div>
+                        <div class="modal__field">
+                            <div class="mdc-text-field mdc-text-field--outlined modal__text-field">
+                                <input type="text" id="name" class="mdc-text-field__input">
+                                <div class="mdc-notched-outline">
+                                    <div class="mdc-notched-outline__leading"></div>
+                                    <div class="mdc-notched-outline__notch">
+                                        <label for="street" class="mdc-floating-label">Электронная почта</label>
+                                    </div>
+                                    <div class="mdc-notched-outline__trailing"></div>
+                                </div>
+                            </div>
+                            <div class="mdc-text-field-helper-line">
+                                <div class="mdc-text-field-helper-text">Вспомогательный текст, если нужен</div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <p class="modal__text modal__text--agree">Отправляя заявку на подключение услуг, <br>я соглашаюсь на обработку своих данных, <br>указанных в заявке с целью информирования <br>по услугам ПАО МГТС и заключения договора.</p>
+                    <button class="blue-button blue-button--big modal__button">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="request_no_connect-modal" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal__flex modal__flex--no_connect">
+                <div class="modal__left modal__left--no_connect">
+                    <div class="modal__title modal__title--white">Оставьте заявку <br>на подключение</div>
+                    <p class="modal__text modal__text--big">Мобильная связь <br>работает везде!</p>
+                    <div class="pack-item modal__pack-item">
+                        <div class="pack-item__head modal__pack-item-head">
+                            <div class="pack-item__icon"><img src="img/smart_mini.svg" alt="" class="img-responsive"></div>
+                            <span class="pack-item__title modal__pack-item-title"><span class="modal__visible-xs">Тариф</span> Smart Mini</span>
+                        </div>
+                        <div class="pack-item__options modal__pack-item-options">
+                            <p class="pack-item__option modal__pack-item-option">
+                                <span class="pack-item__num">2</span> Гбайта
+                            </p>
+                            <p class="pack-item__option modal__pack-item-option">
+                                <span class="pack-item__num">350</span> Мин на все сети
+                            </p>
+                            <p class="pack-item__option modal__pack-item-option">
+                                <span class="pack-item__num">300</span> SMS
+                            </p>
+                        </div>
+                        <div class="pack-item__bottom modal__pack-item-bottom">
+                            <a href="#" class="blue-button pack-item__button">Подключить</a>
+                            <div class="pack-item__price modal__pack-item-price">
+                                <span class="pack-item__count">300</span> ₽/мес.
+                            </div>
+                            <div class="pack-item__sale modal__pack-item-sale">Выгода 14%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__content">
+                    <span class="modal__close modal__close--no_connect" data-dismiss="modal" aria-label="Close"></span>
+
+                    <p class="modal__text">К сожалению, по указанному адресу нет возможности подключить интернет. Оставьте контактные данные, чтобы узнать когда появится возможность.</p>
+
+                    <form action="" class="modal__form">
+                        <div class="modal__field">
+                            <div class="mdc-text-field mdc-text-field--outlined modal__text-field">
+                                <input type="text" id="name" class="mdc-text-field__input" required>
+                                <div class="mdc-notched-outline">
+                                    <div class="mdc-notched-outline__leading"></div>
+                                    <div class="mdc-notched-outline__notch">
+                                        <label for="street" class="mdc-floating-label">ФИО</label>
+                                    </div>
+                                    <div class="mdc-notched-outline__trailing"></div>
+                                </div>
+                            </div>
+                            <div class="mdc-text-field-helper-line">
+                                <div class="mdc-text-field-helper-text">Вспомогательный текст, если нужен</div>
+                            </div>
+                        </div>
+                        <div class="modal__field">
+                            <div class="mdc-text-field mdc-text-field--outlined modal__text-field">
+                                <input type="text" id="name" class="mdc-text-field__input" required>
+                                <div class="mdc-notched-outline">
+                                    <div class="mdc-notched-outline__leading"></div>
+                                    <div class="mdc-notched-outline__notch">
+                                        <label for="street" class="mdc-floating-label">Контактный телефон</label>
+                                    </div>
+                                    <div class="mdc-notched-outline__trailing"></div>
+                                </div>
+                            </div>
+                            <div class="mdc-text-field-helper-line">
+                                <div class="mdc-text-field-helper-text">Вспомогательный текст, если нужен</div>
+                            </div>
+                        </div>
+                        <div class="modal__field">
+                            <div class="mdc-text-field mdc-text-field--outlined modal__text-field">
+                                <input type="text" id="name" class="mdc-text-field__input">
+                                <div class="mdc-notched-outline">
+                                    <div class="mdc-notched-outline__leading"></div>
+                                    <div class="mdc-notched-outline__notch">
+                                        <label for="street" class="mdc-floating-label">Электронная почта</label>
+                                    </div>
+                                    <div class="mdc-notched-outline__trailing"></div>
+                                </div>
+                            </div>
+                            <div class="mdc-text-field-helper-line">
+                                <div class="mdc-text-field-helper-text">Вспомогательный текст, если нужен</div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <p class="modal__text modal__text--agree">Отправляя заявку на подключение услуг, <br>я соглашаюсь на обработку своих данных, <br>указанных в заявке с целью информирования <br>по услугам ПАО МГТС и заключения договора.</p>
+                    <button class="blue-button blue-button--big modal__button">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
