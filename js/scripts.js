@@ -59,12 +59,12 @@ $(document).ready(function(){
 
     $('#packages-checkbox').change(function(e) {
         if ($(this).prop('checked')) {
-            $('#service_packs').fadeOut(500);
-            $('#internet_packs').fadeIn(1500);
+            $('#service_packs').fadeOut(0);
+            $('#internet_packs').fadeIn(300);
         }
         else {
-            $('#internet_packs').fadeOut(500);
-            $('#service_packs').fadeIn(1500);
+            $('#internet_packs').fadeOut(0);
+            $('#service_packs').fadeIn(300);
         }
     });
 
