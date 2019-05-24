@@ -41,6 +41,10 @@
       margin-bottom: 0;
       align-self: center;
     }
+
+    @media (max-width: $xs-min) {
+      max-width: 100px;
+    }
   }
 
   &__left-links {

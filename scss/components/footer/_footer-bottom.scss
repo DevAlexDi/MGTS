@@ -49,6 +49,10 @@
       width: 70%;
       margin: 42px auto 0;
     }
+
+    @media (max-width: $xs-min) {
+      width: 80%;
+    }
   }
 
   &__link {
@@ -140,6 +144,11 @@
 
     @media (max-width: $xs) {
       margin-left: 27px;
+    }
+
+    @media (max-width: $xs-min) {
+      margin-left: 0;
+      font-size: 13px;
     }
   }
 

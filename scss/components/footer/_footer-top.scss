@@ -127,6 +127,10 @@
       margin-top: 7px;
       height: 62px;
     }
+
+    @media (max-width: $xs-min) {
+      height: auto;
+    }
   }
 
   &__apps {
@@ -189,6 +193,10 @@
       width: 129px;
     }
 
+    @media (max-width: $xs-min) {
+      font-size: 12px;
+    }
+
     &:hover {
       background: rgba(116, 121, 131, 0.1);
       border-color: rgba(108, 113, 124, 0.2);
@@ -212,17 +220,32 @@
     &--google {
       padding-left: 44px;
 
+      @media (max-width: $xs-min) {
+        padding-left: 23px;
+      }
+
       &:before {
         left: 14px;
         width: 19px;
         height: 20px;
         transform: translateY(-50%);
         background: url('../img/googleplay.svg');
+
+        @media (max-width: $xs-min) {
+          background-size: cover;
+          width: 10px;
+          height: 11px;
+          left: 9px;
+        }
       }
     }
 
     &--apple {
       padding-left: 47px;
+
+      @media (max-width: $xs-min) {
+        padding-left: 26px;
+      }
 
       &:before {
         left: 13px;
@@ -230,6 +253,14 @@
         height: 25px;
         transform: translateY(-13px);
         background: url('../img/appstore.svg');
+
+        @media (max-width: $xs-min) {
+          left: 9px;
+          width: 10px;
+          height: 13px;
+          background-size: cover;
+          transform: translateY(-7px);
+        }
       }
     }
   }

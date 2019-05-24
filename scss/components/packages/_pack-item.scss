@@ -37,6 +37,10 @@
     order: 1;
   }
 
+  @media (max-width: $xs-min) {
+    width: 270px;
+  }
+
   &:nth-child(3n+3) {
     margin-right: 0;
 
@@ -386,6 +390,10 @@
       margin: 4px 0 0;
     }
 
+    @media (max-width: $xs-min) {
+      font-size: 14px;
+    }
+
     &--internet {
       @media (max-width: $md) {
         text-align: right;
@@ -409,6 +417,10 @@
     line-height: 28px;
     font-family: $roboto;
     color: $black;
+
+    @media (max-width: $xs-min) {
+      font-size: 20px;
+    }
   }
 
   &__sale {

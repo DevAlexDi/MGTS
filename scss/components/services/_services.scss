@@ -113,6 +113,14 @@
       padding: 23px 105px 23px 15px;
     }
 
+    @media (max-width: $xs-min) {
+      padding-right: 66px;
+    }
+
+    @media (max-width: $xs-min) {
+      width: 265px;
+    }
+
     &--no_margin_right {
       margin-right: 0;
 
@@ -168,6 +176,10 @@
         padding-right: 145px;
         margin-right: 15px;
       }
+
+      @media (max-width: $xs-min) {
+        padding-right: 106px;
+      }
     }
 
     &--3 {
@@ -185,6 +197,10 @@
 
       @media (max-width: $xs) {
         padding-right: 135px;
+      }
+
+      @media (max-width: $xs-min) {
+        padding-right: 96px;
       }
     }
   }
@@ -260,6 +276,10 @@
       @media (max-width: $xs) {
         margin-right: 80px;
         margin-top: 20px;
+      }
+
+      @media (max-width: $xs-min) {
+        margin-right: 60px;
       }
     }
 

@@ -77,6 +77,10 @@
       line-height: 21px;
     }
 
+    @media (max-width: $xs-min) {
+      font-size: 15px;
+    }
+
     &:first-child {
       @media (max-width: $xs) {
         margin-left: 0;
