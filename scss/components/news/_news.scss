@@ -20,8 +20,21 @@
     @media (max-width: $sm) {
       margin-top: 45px;
       overflow: auto;
-      width: calc(100% + 300px);
+      width: calc(100% + 50px);
+      position: relative;
+      left: -25px;
+      padding-left: 25px;
+      padding-right: 25px;
     }
+
+    &::-webkit-scrollbar-button {
+        width:2px;
+        height:2px;
+    }
+    &::-webkit-scrollbar{
+        width:2px;
+        height:2px;
+    } 
 
     @media (max-width: $xs) {
       margin-top: 28px;
