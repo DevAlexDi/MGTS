@@ -182,11 +182,11 @@
   &__city {
     color: white;
     cursor: pointer;
-    border-bottom: 1px dotted white;
     transition: 0.3s;
+    background: url('../img/dotted_bg.png') repeat-x bottom;
 
     &:hover {
-      border-bottom-color: transparent;
+      background-image: none;
     }
   }
 

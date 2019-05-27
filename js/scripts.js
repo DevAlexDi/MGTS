@@ -176,14 +176,14 @@ $(document).ready(function(){
 
             if (ww > 1023) {
                 if (order > 1) {
-                    left_position = -((order - 1) * 284) - 654;
+                    left_position = -((order - 1) * 280) - 654;
                 }
                 else {
-                    left_position = -(order * 284);
+                    left_position = -(order * 280);
                 }
             }
             else {
-                left_position = -(order * 284);
+                left_position = -(order * 280);
             }
 
             if ($(this).hasClass('header-bottom__link')) {
