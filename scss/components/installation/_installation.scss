@@ -1,8 +1,12 @@
 @import "layout/var";
 
 .installation {
+  max-width: 1920px;
+  margin: auto;
+
   &__image {
     width: 100%;
+    max-width: 1920px;
     height: 702px;
     background: url('../img/installation.png') no-repeat center;
     background-size: cover;
