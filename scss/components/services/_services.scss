@@ -130,7 +130,7 @@
     }
 
     &--left {
-      padding: 34px 42px 34px 32px;
+      padding: 34px 35px 34px 32px;
       background: url('../img/serv1.png') no-repeat center;
       background-size: cover;
       height: calc(100% - 16px);
@@ -152,6 +152,12 @@
         margin-right: 0;
         margin-top: 0;
         padding: 35px 30px 90px 13px;
+      }
+
+      br {
+        @media (max-width: $md) {
+          display: none;
+        }
       }
     }
 
@@ -265,7 +271,7 @@
       @media (max-width: $md) {
         font-size: 18px;
         line-height: 25px;
-        margin-right: 155px;
+        margin-right: 150px;
         margin-top: 26px;
       }
 
@@ -295,7 +301,11 @@
       }
 
       @media (max-width: $md) {
-        width: 39%;
+        width: 40%;
+      }
+
+      @media (max-width: $sm) {
+        width: 50%;
       }
 
       @media (max-width: $xs) {
@@ -306,6 +316,10 @@
       &:first-child {
         @media (max-width: $md) {
           margin-right: 25px;
+        }
+
+        @media (max-width: $sm) {
+          margin-right: 23px;
         }
 
         @media (max-width: $xs) {
