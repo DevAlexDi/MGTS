@@ -10,6 +10,10 @@
     overflow: hidden;
   }
 
+  @media (max-width: $xs) {
+    overflow: visible;
+  }
+
   &--can {
     background: linear-gradient(0deg, #FCC6AE 0%, #B380CE 40%, #4469CA 100%);
     box-shadow: none;
@@ -87,6 +91,7 @@
     font-family: $Montserrat;
     color: #A3CDFF;
     margin-top: 23px;
+    position: relative;
 
     @media (max-width: $md) {
       font-size: 19px;
