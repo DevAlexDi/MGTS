@@ -4,6 +4,7 @@ $(document).ready(function(){
 
     //$('#request-modal').modal('show');
     //$('#request_no_connect-modal').modal('show');
+    $('#request_no_connect-modal2').modal('show');
 
     var ww = $(window).width();
 
