@@ -5,8 +5,12 @@ $(document).ready(function(){
     //$('#request-modal').modal('show');
     //$('#request_no_connect-modal').modal('show');
     $('#request_no_connect-modal2').modal('show');
+    
+    function getScrollbarWidth() {
+      return window.innerWidth - document.documentElement.clientWidth;
+    }
 
-    var ww = $(window).width();
+    var ww = $(window).width() + getScrollbarWidth();
 
     // head slider
 
@@ -95,8 +99,7 @@ $(document).ready(function(){
     }
 
     $(window).resize(function(e) {
-        ww = $(window).width();
-
+        ww = $(window).width() + getScrollbarWidth();
         if (ww < 1280) {
             if (ww > 767) {
                 $('.services__left').append($('.services__item--4'));
