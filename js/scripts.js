@@ -4,7 +4,7 @@ $(document).ready(function(){
 
     //$('#request-modal').modal('show');
     //$('#request_no_connect-modal').modal('show');
-    $('#request_no_connect-modal2').modal('show');
+    //$('#request_no_connect-modal2').modal('show');
     
     function getScrollbarWidth() {
       return window.innerWidth - document.documentElement.clientWidth;
