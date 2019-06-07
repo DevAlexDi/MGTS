@@ -4,6 +4,16 @@
   background: rgba(28, 29, 32, 0.6);
   z-index: 9005;
 
+  &.in {
+    display: flex!important;
+    align-items: flex-start;
+
+    @media (max-width: $xs) {
+      display: flex!important;
+      align-items: flex-start;
+    }
+  }
+
   &__flex {
     display: flex;
 
@@ -433,10 +443,10 @@
   width: 750px;
   box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.12);
   border-radius: 8px;
-  top: 50%;
-  transform: translateY(-50%)!important;
+  //top: 50%;
+  //transform: translateY(-50%)!important;
   overflow: hidden;
-  margin: 0 auto;
+  margin: auto;
 
   @media (max-width: $sm) {
     width: 728px;
@@ -449,6 +459,8 @@
     transform: none!important;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    position: absolute;
+    //position: absolute;
+    position: relative;
+    margin-top: auto;
   }
 }

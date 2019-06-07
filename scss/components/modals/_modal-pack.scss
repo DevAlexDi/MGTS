@@ -1,0 +1,200 @@
+@import "layout/var";
+
+.modal-pack {
+  background: white;
+  margin: 14px 16px 30px 50px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  flex-shrink: 0;
+  margin-top: 0;
+  margin-right: 8px;
+  width: 234px;
+  padding: 22px 15px 20px;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $sm) {
+    margin-left: 30px;
+  }
+
+  @media (max-width: $xs) {
+    width: 320px;
+    margin: 0 auto;
+    background: transparent;
+    padding: 15px 0 15px;
+    box-shadow: none;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @media (max-width: $xs) {
+      flex-direction: row;
+    }
+  }
+
+  &__icon {
+    max-width: 65px;
+
+    @media (max-width: $xs) {
+      max-width: 57px;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    font-family: $roboto;
+    line-height: 21px;
+    font-weight: $normal;
+    color: $footer-menu;
+    margin-top: 17px;
+    margin-left: 0;
+    align-self: flex-start;
+
+    @media (max-width: $xs) {
+      margin-left: 18px;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 14px;
+      margin-top: 30px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 32px;
+    font-weight: $normal;
+    font-family: $roboto;
+    color: $black;
+
+    @media (max-width: $xs) {
+      display: none;
+    }
+  }
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+    flex-direction: column;
+
+    @media (max-width: $xs) {
+      display: none;
+    }
+  }
+
+  &__side {
+    width: 100%;
+    border-bottom: 1px dotted rgba(0,0,0,0.2);
+    display: flex;
+    padding: 15px 0 10px;
+
+    &:first-child {
+      padding-left: 0;
+
+      .modal-pack__option {
+        br {
+          display: block!important;
+        }
+      }
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    &--empty {
+      display: none;
+    }
+  }
+
+  &__name {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: $normal;
+    font-family: $roboto;
+    color: rgba(0,0,0, 0.5);
+    height: 32px;
+    width: 80px;
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+
+  &__options {
+    margin-left: 29px;
+    width: 100%;
+  }
+
+  &__option {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: $normal;
+    font-family: $roboto;
+    color: $black;
+    margin: 0 0 5px;
+
+    br {
+      display: none;
+    }
+  }
+
+  &__num {
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 22px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: auto;
+
+    @media (max-width: $xs) {
+      display: none;
+    }
+  }
+
+  &__button {
+    order: 2;
+  }
+
+  &__price {
+    font-size: 16px;
+    line-height: 28px;
+    font-family: $roboto;
+    color: $grey-text;
+    font-weight: $normal;
+    order: 1;
+    margin: 13px 0;
+  }
+
+  &__count {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    font-family: $roboto;
+    color: $black;
+  }
+
+  &__sale {
+    text-align: center;
+    font-size: 14px;
+    line-height: 16px;
+    font-family: $roboto;
+    color: white;
+    background: $green;
+    border: 1px solid $green;
+    box-sizing: border-box;
+    border-radius: 12px;
+    padding: 1px 8px;
+    opacity: 0.8;
+    font-weight: $normal;
+    position: relative;
+    order: 0;
+  }
+}

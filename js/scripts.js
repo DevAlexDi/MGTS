@@ -4,8 +4,13 @@ $(document).ready(function(){
 
     //$('#request-modal').modal('show');
     //$('#request_no_connect-modal').modal('show');
+    //$('#request_no_connect-modal2').modal('show');
+    
+    function getScrollbarWidth() {
+      return window.innerWidth - document.documentElement.clientWidth;
+    }
 
-    var ww = $(window).width();
+    var ww = $(window).width() + getScrollbarWidth();
 
     // head slider
 
@@ -94,8 +99,7 @@ $(document).ready(function(){
     }
 
     $(window).resize(function(e) {
-        ww = $(window).width();
-
+        ww = $(window).width() + getScrollbarWidth();
         if (ww < 1280) {
             if (ww > 767) {
                 $('.services__left').append($('.services__item--4'));
@@ -190,6 +194,14 @@ $(document).ready(function(){
                 link_height -= 22;
             }
 
+            if ($(this).hasClass('connection__city')) {
+                left = left - (width / 2) + 57;
+                $('.popup__top').addClass('popup__top--center');
+            }
+            else {
+                $('.popup__top').removeClass('popup__top--center');
+            }
+
             $('.popup-wrap').css({
                 'left': left + 'px',
                 'top': top + link_height + 'px'
@@ -237,11 +249,25 @@ $(document).ready(function(){
     });
 
     $('.open_popup_menu').click(function(e) {
+        e.stopPropagation();
         if (ww < 768) {
-            e.preventDefault();
             var menu = $(this).attr('data-popup');
 
-            $(menu).slideToggle();
+            if (!$(this).hasClass('connection__city')) {
+                e.preventDefault();
+
+                $(menu).slideToggle();
+            }
+            else {
+                $(menu).addClass('popup__list--mobile_absolute').appendTo($('.connection__title'));
+            }
+        }
+    });
+
+    $('body').click(function (e) {
+        if ($('#location-popup').hasClass('popup__list--mobile_absolute') && ww < 768) {
+            $('#location-popup').removeClass('popup__list--mobile_absolute');
+            $('.open_popup_menu[data-popup="#location-popup"].header-top__link-open').after($('#location-popup'));
         }
     });
 
@@ -279,7 +305,7 @@ function mobile_menu_constructor() {
     $('.header-top__left-links').prependTo($('.popup__menus'));
 
     $('.open_popup_menu[data-popup="#clients-popup"]').after($('#clients-popup'));
-    $('.open_popup_menu[data-popup="#location-popup"]').after($('#location-popup'));
+    $('.open_popup_menu[data-popup="#location-popup"].header-top__link-open').after($('#location-popup'));
 }
 
 function mobile_menu_destructor() {
